@@ -1,3 +1,4 @@
+# New get function git
 git init
 git config --list --show-origin
 git config --global user.name "Suphot-Ch"
@@ -8,5 +9,6 @@ git clone https://github.com/Suphot-Ch/weborder.git
 
 git commit -m "update index"
 
+# Push function 
 git push origin master
 git push https://github.com/Suphot-Ch/weborder.git master
