@@ -1,0 +1,38 @@
+{
+    "ORDER": "TGM-63155",
+    "KEYWORD": "TGM-63155 2I5D3R [ TARGET ACTUAL DIFF ] RS485 slave",
+    "DISPLAY": "7 Segment",
+    "SIZE": "2.3 INC",
+    "INPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "OUTPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "COMMUNICATION": {
+        "TYPE": "RS485 Modbus RTU",
+        "OTHER": "slave",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "- เชื่อมต่อ RS485 Modbus RTU เพื่อรับขอ้ มูล",
+        "- สามารถอ่านเชียนข้อมลู ผ่าน RS485 Modbus RTU ได้ท้งั 3 แถว",
+        "- สามารถตัง้ ค่า Slave address ได้ 1 – 127",
+        "- สามารถตัง้ ค่า Baudrate ได้ 4800 9600 19200 38400 57600",
+        "- สามารถตัง้ ค่า Parity ได้ None Odd Even"
+    ],
+    "BODYSIZE": "550W x 350H x 100D mm.",
+    "DATE": "25/11/2020",
+    "PRICE": "34300",
+    "SALE": {
+        "NAME": "Theerayut",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "ORDER": "TGM-63160",
+    "KEYWORD": "TGM-63160 2I 6D1R 4D1R TIME DATE 4I5D2R 1IP_CNT COUNT LASTCOUNT",
+    "DISPLAY": "7 Segment",
+    "SIZE": "2.3/4 INC",
+    "INPUT": {
+        "TYPE": "Counter PNP NPN ,Contact 1 Channel",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "OUTPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "COMMUNICATION": {
+        "TYPE": "RS485 Modbus RTU slave",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "24VDC/130mA",
+    "FUNCTION": [
+        "- ตั้งค่า ตัวคูณตัวหารได้ 1 - 999",
+        "- ตั้งค่า ทศนืยมได้",
+        "- ตั้งค่า Move Counter ได้ 2 ช่วงเวลา",
+        "DATE แสดงวันที่ปัจจุบัน",
+        "TIME  แสดงเวลาปัจจุบัน",
+        "COUNTER แสดงค่าที่รับได้จาก Input ",
+        "LAST COUNTER แสดงค่าที่ Move มาจาก Counter"
+    ],
+    "BODYSIZE": "900W x 600H x 100D mm.",
+    "DATE": "07/12/2020",
+    "PRICE": "32100",
+    "SALE": {
+        "NAME": "Game",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

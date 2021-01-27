@@ -1,0 +1,51 @@
+{
+  "ORDER": "TGM-64011",
+  "KEYWORD": "TGM-64011 4I4D1R RS485 convert to RS232 RM-012N-E",
+  "DISPLAY": {
+    "TYPE": "7 Segment",
+    "SIZE": "4\"",
+    "OTHER": ""
+  },
+  "INPUT": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CHANNEL": ""
+  },
+  "OUTPUT": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CHANNEL": ""
+  },
+  "COMMUNICATION": {
+    "TYPE": "RS485 MB RTU Slave",
+    "OTHER": "PM-012N-E",
+    "CHANNEL": "1"
+  },
+  "SUPPLY": {
+    "TYPE": "110-240 VAC/ 50-60Hz",
+    "OTHER": ""
+  },
+  "SOURCES": {
+    "TYPE": "-",
+    "OTHER": ""
+  },
+  "FUNCTION": [
+    "FUNCTION",
+    "- แสดงผลตัวเลข -1999 - 9999",
+    "- ตั้งค่าตัวเลขได้ผ่าน Remote และ RS485 Modbus RTU",
+    "FEATURE",
+    "- RTU รองรับการทำงานของ Function 06h Preset single register",
+    "และ Function 10h Preset multi registers ได้",
+    "- RTU รองรับการทำงานของ Function 03h Read holding registers",
+    "และ Function 04h Read input registers ได้"
+  ],
+  "BODYSIZE": "500W x 300H x 100D",
+  "DATE": "2021-01-27",
+  "SALE": {
+    "NAME": "ชคุณวสันต์",
+    "BRANCH": "อีสาน",
+    "CALL": "0901979600",
+    "EMAIL": "",
+    "CUSTOMER": ""
+  }
+}

@@ -1,0 +1,34 @@
+{
+    "ORDER": "TGM-63152",
+    "KEYWORD": "TGM-63152 2I4D1R 2D1R RS485 slave",
+    "DISPLAY": "7 Segment",
+    "SIZE": "2.3 INC",
+    "INPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "OUTPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "COMMUNICATION": {
+        "TYPE": "RS232 Modbus RTU",
+        "OTHER": "RM-012N-E",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "- สามารถอ่านเขียนข้อมูลได้ผ่าน RS232 Modbus RTU"
+    ],
+    "BODYSIZE": "300W x 250H x 100D mm.",
+    "DATE": "18/11/2020",
+    "PRICE": "17200",
+    "SALE": {
+        "NAME": "Boy Wasan",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "ORDER": "TGM-63159",
+    "KEYWORD": "TGM-63159 4I3D2R 2AP_420 [TEMP HUMI]  HM-005",
+    "DISPLAY": "7 Segment",
+    "SIZE": "4 INC",
+    "INPUT": {
+        "TYPE": "Analog 4-20mA",
+        "OTHER": "HM-005-00",
+        "CH": "2"
+    },
+    "OUTPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "COMMUNICATION": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "PM-024S-1.2",
+    "FUNCTION": [
+        "- ตั้งค่า Scale min max ได้ -199 - 999",
+        "- ตั้งค่า ทศนืยมได้ 1 ตำแหน่ง",
+        "- ตั้งค่า ชดเชยค่าได้ กรณีไม่มีจุด(-199 - 999) กรณีมีจุด(-19.9 – 99.9)"
+    ],
+    "BODYSIZE": "600W x 400H x 100D mm.",
+    "DATE": "04/12/2020",
+    "PRICE": "25800",
+    "SALE": {
+        "NAME": "Piyanuch ( Primus Co.,Ltd. ) <piyanuch@primusthai.com>",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

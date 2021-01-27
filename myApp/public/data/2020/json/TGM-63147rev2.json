@@ -1,0 +1,37 @@
+{
+    "ORDER": "TGM-63147rev2",
+    "KEYWORD": "TGM-63147rev2 2I for date time 4I6D3R 1IP_CNT",
+    "DISPLAY": "7 Segment",
+    "SIZE": "2.3 INC and 4 INC",
+    "INPUT": {
+        "TYPE": "Digital Counter",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "OUTPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "COMMUNICATION": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "12VDC",
+    "FUNCTION": [
+        "- แสดงวันที่ และเวลาปัจจุบัน (ปี ค.ศ.)",
+        "- Target ตั้งค่า Cycle ได้ 0 – 999 Sec.",
+        "- Actual ตั้งค่าตัวคูณตัวหาร ได้ 1 – 999",
+        "- Diff. เป็นผลลัพธ์เมื่อ (Actual - Target)"
+    ],
+    "BODYSIZE": "950W x 750H x 100D mm.",
+    "DATE": "06/11/2020",
+    "PRICE": "43900",
+    "SALE": {
+        "NAME": "Chalongbun",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

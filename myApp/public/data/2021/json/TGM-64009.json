@@ -1,0 +1,49 @@
+{
+  "ORDER": "TGM-64009",
+  "KEYWORD": "TGM-64009 4I6D1R 2F RS485 convert to RS232 RM-012N-E",
+  "DISPLAY": {
+    "TYPE": "7 Segment",
+    "SIZE": "4\"",
+    "OTHER": ""
+  },
+  "INPUT": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CHANNEL": ""
+  },
+  "OUTPUT": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CHANNEL": ""
+  },
+  "COMMUNICATION": {
+    "TYPE": "RS485 MB RTU Slave",
+    "OTHER": "",
+    "CHANNEL": "1"
+  },
+  "SUPPLY": {
+    "TYPE": "110-240 VAC/ 50-60Hz",
+    "OTHER": ""
+  },
+  "SOURCES": {
+    "TYPE": "-",
+    "OTHER": ""
+  },
+  "FUNCTION": [
+    "FUNCTION",
+    "- แสดงผลตัวเลข -199999 - 999999",
+    "- ตั้งค่าตัวเลขได้ผ่าน Remote และ RS485 Modbus RTU",
+    "FEATURE",
+    "- RTU รองรับการทำงานของ Function 06h Preset single register เมื่อเขียนข้อมูล 0 ถึง 65535 ในตำแหน่ง low word และ Function 10h Preset multi registers",
+    "- RTU รองรับการทำงานของ Function 03h Read holding registers และ 04h Read input registers"
+  ],
+  "BODYSIZE": "700W x 300H x 100D",
+  "DATE": "2021-01-26",
+  "SALE": {
+    "NAME": "คุณวสันต์",
+    "BRANCH": "อีสาน",
+    "CALL": "0901979600",
+    "EMAIL": "",
+    "CUSTOMER": ""
+  }
+}

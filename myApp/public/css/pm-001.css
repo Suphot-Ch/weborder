@@ -1,0 +1,393 @@
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Full-width input fields */
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 5px 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    input[type=button] {
+        background-color: rgb(73, 218, 150);
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        width: 100%;
+    }
+
+    /* Set a style for all buttons */
+    button {
+        background-color: rgb(0, 185, 99);
+        color: white;
+        padding: 10px 50px;
+        margin: 16px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    .Download {
+        background-color: rgb(73, 218, 150);
+        ;
+        color: white;
+        padding: 10px 40px;
+        margin: 5px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+        width: 100%;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+
+    /* Center the image and position the close button */
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+    }
+
+    img.avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        /*display: none; */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 20%;
+        overflow: auto;
+        background-color: #fefefe;
+        padding-top: 60px;
+    }
+
+    .block-head-a {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        background-color: #49D796;
+        color: #fefefe;
+        border: solid 1px;
+    }
+
+    .block-head-d {
+        position: absolute;
+        left: 0;
+        top: 70px;
+        right: 0;
+        width: 1400px;
+        height: 100%;
+    }
+
+    ;
+
+    .block-head-01 {
+        margin: 15px 5px;
+        top: 100px;
+        width: 180px;
+        height: 40px;
+        color: #000000;
+        background-color: rgb(73, 218, 150);
+    }
+
+    ;
+
+    .block-head-02 {
+        top: 100px;
+        width: 180px;
+        height: 40px;
+        color: #000000;
+        background-color: rgb(73, 218, 150);
+    }
+
+    ;
+
+    .block-head-03 {
+        top: 100px;
+        width: 600px;
+        height: 40px;
+        color: #fefefe;
+        background-color: rgb(73, 218, 150);
+    }
+
+    ;
+
+    .block-head-11 {
+        top: 100px;
+        width: 180px;
+        height: 40px;
+        color: #000000;
+        background-color: rgb(73, 218, 150);
+    }
+
+    ;
+
+    .block-head-12 {
+        top: 100px;
+        width: 600px;
+        height: 40px;
+        color: #fefefe;
+        background-color: rgb(73, 218, 150);
+    }
+
+    ;
+
+    .tbody-head-a {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 20px;
+        background-color: white;
+        color: black;
+        padding-top: auto;
+    }
+
+    .body-main {
+        /*position: relative;*/
+        /*min-height: 100%; */
+        top: 0px;
+        background-color: rgba(172, 230, 174, 0.575);
+    }
+
+    .Text-hear-a {
+        position: absolute;
+        left: 100px;
+        top: 150px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    /* The Close Button (x) */
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+
+    /* Add Zoom Animation */
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes animatezoom {
+        from {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    .year-button-1 {
+        display: block;
+    }
+
+    .year-button-2 {
+        display: none;
+    }
+
+    .button-head {
+        background-color: rgb(0, 185, 99);
+        ;
+        color: white;
+        padding: 10px 50px;
+        margin: 15px 5px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 900px) {
+        .block-head-d {
+            width: 700px;
+        }
+
+        ;
+
+        .block-head-02 {
+            display: none;
+        }
+
+        .block-head-03 {
+            display: none;
+        }
+
+        .button-head {
+            padding: 5px 10px;
+            margin: 15px 5px;
+        }
+    }
+
+    table#t01 {
+        width: 100%;
+    }
+
+    table#t01 th {
+        color: white;
+        width: auto;
+    }
+
+    table#t02 {
+        width: 100%;
+        color: white;
+    }
+
+    .container-main {
+        position: sticky;
+        float: left;
+        width: 305px;
+        padding: 11px;
+    }
+
+    .container {
+        position: sticky;
+        float: left;
+        width: 300px;
+        margin: auto;
+        padding: 10px;
+        background-color: white;
+    }
+
+    .row {
+        height: auto;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .order-name {
+        height: 10%;
+        padding: 2px;
+        background-color: rgb(73, 218, 150);
+        color: white
+    }
+
+    .order-picture {
+        height: 200px;
+        background-color: rgb(73, 218, 150);
+    }
+
+    .order-detail {
+        height: 50px;
+        width: auto;
+        padding: 5px;
+        background-color: rgb(73, 218, 150);
+    }
+
+    .order-detail-type {
+        float: left;
+        width: 15%;
+    }
+
+    .order-detail-data {
+        float: left;
+        width: 70%;
+    }
+
+    .order-detail-ch {
+        float: right;
+        width: 15%;
+    }
+
+    .order-view-detial {
+        height: 20px;
+        width: 100px;
+        padding: 1px;
+    }
+
+    .order-download {
+        height: 20px;
+        width: 150px;
+        padding: 1px;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .center {
+        float: left;
+        margin: 0 5%;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .blank {
+        float: left;
+        height: 10px;
+        width: 10px;
+    }
+
+    .a-button {
+        background-color: rgb(73, 218, 150);
+        color: white;
+        padding: 10px 20px;
+        margin: 5px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .a-button:hover {
+        color: black;
+        opacity: 0.8;
+    }

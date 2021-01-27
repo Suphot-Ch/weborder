@@ -1,0 +1,45 @@
+{
+    "ORDER": "TGM-64001",
+    "KEYWORD": "TGM-64001 2I3D2R 2AP_420 HM-005-00 2OP_AL RS485 slave",
+    "DISPLAY": "7 Segment",
+    "SIZE": "2.3 INC",
+    "INPUT": {
+        "TYPE": "Analog 4-20mA",
+        "OTHER": "",
+        "CH": "2"
+    },
+    "OUTPUT": {
+        "TYPE": "Relay Alarm",
+        "OTHER": "",
+        "CH": "2"
+    },
+    "COMMUNICATION": {
+        "TYPE": "RS485 Modbus RTU",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "PM-024S-1.2",
+    "FUNCTION": [
+        "FUNCTION",
+        "- ตั้งค่า Scale high low ได้ -199 - 999",
+        "- ตั้งค่า ทศนิยมได้",
+        "- ตั้งค่า Alarm limit  ได้ 4 Mode",
+        "- ตั้งค่า Baudrate , Parity และ Slave address",
+        "FEATURE",
+        "- Alarm Mode 1 : High Low Limit",
+        "- Alarm Mode 2 : High Limit",
+        "- Alarm Mode 3 : Low Limit",
+        "- Alarm Mode 4 : High Low Limit Range"
+    ],
+    "BODYSIZE": "550W x 350H x 100D mm.",
+    "DATE": "04/01/2021",
+    "PRICE": "27000",
+    "SALE": {
+        "NAME": "สถาพร รัตนประเสริฐ",
+        "BRANCH": "สมุทปราการ",
+        "CALL": "0901979608",
+        "EMAIL": "sathaporn@primusthai.com",
+        "CUSTOMMER": ""
+    }
+}

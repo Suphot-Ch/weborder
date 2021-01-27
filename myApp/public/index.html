@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+    <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/w3-table.css">
+    <title>Test read json</title>
+    <link rel="icon"
+        href="https://user-images.githubusercontent.com/11943860/42296280-559c07f0-7fca-11e8-9a50-4fccde0b86cb.png"
+        type="image/x-icon">
+    <script src="./typedef.js"></script>
+    <script src="./Jquary/jquery.min.js"></script>
+</head>
+
+<style>
+</style>
+
+<body onpageshow="loadtable()">
+    <div class="centered w3-container" id="alarm"></div>
+    <header class="w3-container" style="background-color:#228738;color:#fff">
+        <p><a href="#add" onclick="addfile();">Add Order</a></p>
+        <!-- <p id="s-screen"></p>
+        <script>
+          var x = "Total Width: " + screen.width + "px";
+          document.getElementById("s-screen").innerHTML = x;
+        </script> -->
+    </header>
+    <!-- <div class="w3-container" id="minimize">
+    </div> -->
+    <div class="w3-container">
+        <table class="w3-table w3-bordered w3-striped" id="myTable">
+        <!-- data-role="table" data-mode="columntoggle"> -->
+            <div class="header" id="myHeader">
+                <thead class="header" id="myHeader">
+                    <h3 style="color:#009688"> TGM Download </h3>
+                    <div style="padding: 5px 5px; width: auto;" >
+                        <div style="width: auto; float: left;" >
+                            <label style="color:#009688" for="selest-year">Choose year:</label>
+                            <select id="selest-year">
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <!-- <option value="2019">2019</option> -->
+                                <!-- <option value="2018">2018</option> -->
+                                <!-- <option value="2017">2017</option> -->
+                            </select>
+                            <button id="btn-apply" style="background-color:#228738; width: 100px;">Apply</button>
+                        </div>
+                    </div><br>
+                    <div style="padding: 5px 5px; width: auto"><br>
+                        <div style="width: auto;">
+                            <label style="color:#009688" for="selest-filter">Choose filter:</label>
+                            <select id="selest-filter">
+                                <option value="all">all</option>
+                                <option value="input">segment</option>
+                                <option value="input">input</option>
+                                <option value="output">output</option>
+                                <option value="communicate">communicate</option>
+                                <option value="detail">detail</option>
+                            </select>
+                            <input id="search-table" type="text" style="width: 200px;" placeholder="filter..." title="Type in a name"/>
+                        </div>
+                    </div>
+                    <tr style="background-color:#228738;color:#fff">
+                        <th id="th-model" style="width: 150px;" onclick="sortTable(0)">Model
+                            <a id="a-model"></a></th>
+                        <th>View</th>
+                        <th id="th-segment" style="width: 150px;"data-priority="1" onclick="sortTable(2)">Segment
+                            <a id="a-segment"></a></th>
+                        <th id="th-input" style="width: 150px;"data-priority="2" onclick="sortTable(3)">Input 
+                            <a id="a-input"></a></th>
+                        <th id="th-output" style="width: 150px;"data-priority="3" onclick="sortTable(4)">Output
+                            <a id="a-output"></a></th>
+                        <th id="th-comm" style="width: 150px;"data-priority="4" onclick="sortTable(5)">Comm
+                            <a id="a-comm"></a></th>
+                        <th id="th-download" data-priority="5" >Download</th>
+                        <th id="th-detail" style="width: 600px;"data-priority="6" >Detail</th>
+                    </tr>
+                </thead>
+            </div>
+            <div class="content">
+            <!-- <p id="loadTable"></p> -->
+                <tbody id="loadTable">
+                    <!-- <div>
+                        <tr>
+                            <td>TGM-63001</td>
+                            <td><img width="200"
+                                    src="https://www.primusthai.com/Rddocs/TGM/order/2020/images/TGM-63001.png"></td>
+                            <td>Analog 4-20mA 1 ch</td>
+                            <td>Relay Alarm 1 ch</td>
+                            <td><a class="a-button"
+                                    href="https://www.primusthai.com/Rddocs/TGM/order/2020/file/TGM-63001.pdf">Download</a>
+                            </td>
+                            <td>
+                                <div>
+                                    - Fix Bug Calendar can't open
+                                    <br>- Fix Bugฺ Horizontal Bar color display
+                                    <br>- Update Hidden menu bar
+                                    <br>- Update Text Font style at message box
+                                    <br>- Update switch element in map diagram
+                                    <br>- Update style Bar graph in map diagram
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TGM-63002</td>
+                            <td><img width="200"
+                                    src="https://www.primusthai.com/Rddocs/TGM/order/2020/images/TGM-63001.png"></td>
+                            <td>Digital Counter 1 ch</td>
+                            <td>Relay Alarm 1 ch</td>
+                            <td><a class="a-button"
+                                    href="https://www.primusthai.com/Rddocs/TGM/order/2020/file/TGM-63001.pdf">Download</a>
+                            </td>
+                            <td>
+                                <div>
+                                    - Fix Bug Calendar can't open
+                                </div>
+                            </td>
+                        </tr>
+                    </div> -->
+                    <!-- <div id="loadTable"></div> -->
+                </tbody>
+            </div>
+        </table>
+        <div>
+            <a class="a-button" href="/Rddocs/Prisoft/FAQ" target="_blank">FAQ</a>
+        </div>
+    </div>
+    <br>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+        </script>
+    <script src="./js/index_function.js"></script>
+    <script src="./js/sort-table.js"></script>
+    <script src="./js/filter-table.js"></script>
+
+    <footer class="w3-container" style="background-color:#228738;color:#fff">
+        <p></p>
+        <p id="counter"></p>
+    </footer>
+
+</body>
+</html>

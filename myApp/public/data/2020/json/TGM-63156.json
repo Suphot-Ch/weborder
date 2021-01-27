@@ -1,0 +1,43 @@
+{
+    "ORDER": "TGM-63156",
+    "KEYWORD": "TGM-63156 2I4D3R [ TARGET ACTUAL DIFF ] 1IP_CNT 2OP_AL",
+    "DISPLAY": "7 Segment",
+    "SIZE": "2.3 INC",
+    "INPUT": {
+        "TYPE": "Counter Sensor(pnp npn), Contact switch",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "OUTPUT": {
+        "TYPE": "Relay Alarm Setpoint",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "COMMUNICATION": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "- ตัง้ ค่าตัวคูณ/ตัวหารได้ แบบ Real Time",
+        "- ตัง้ ค่าทศนิยมได้ สูงสดุ 2 จุด",
+        "- ตัง้ ค่าให้สามารถนับข้นึ /ลงได ้",
+        "- ตัง้ ค่าเลือก Type Input ได้",
+        "- ตัง้ ค่า Alarm Setpoint ได้ 0 – 9999",
+        "PLAN ป้อนข้อมูลจาก Remote",
+        "ACTUAL แสดงผล Counter จาก Input",
+        "DIFF. แสดงผลลัพทเมื่่อ ACTUAL - PLAN",
+        "**ติดตัง้ ห่วงสำหรบั แขวนแบบที่ 3",
+        "**ติดตัง้ Terminal ด้านข้าง"
+    ],
+    "BODYSIZE": "400W x 350H x 100D mm.",
+    "DATE": "27/11/2020",
+    "PRICE": "18500",
+    "SALE": {
+        "NAME": "Paimanee <paimanee@primusthai.com>",
+        "BRANCH": "",
+        "CUSTOMER": "บ.ไออี คอนโทรล"
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "ORDER": "TGM-64005",
+    "KEYWORD": "TGM-64005 4I4D2R 2M12D1R 1OP_AL RS485 slave",
+    "DISPLAY": "7 Segment",
+    "SIZE": "4 INC",
+    "INPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "OUTPUT": {
+        "TYPE": "Relay Alarm",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "COMMUNICATION": {
+        "TYPE": "RS485 Modbus RTU slave",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "FUNCTION",
+        "- แสดงผลตัวเลข 0 - 9999",
+        "- กำหนดค่า ทศนิยมได้",
+        "- ตั้งค่า Alarm Setpoint ได้ 0 - 9999",
+        "FEATURE",
+        "- TARGET : แสดงผลค่าที่ตั้งค่าผ่าน Remote / RS485 Modbus RTU",
+        "- ACTUAL : แสดงผลค่าที่รับได้จาก RS485 Modbus RTU",
+        "- ตัวอักษร Matrix : สามารถตั้ง ค่าผ่าน Remote / RS485 Modbus RTU",
+        "- Alarm : ทำงานเมื่อ ACTUAL  มากกว่าหรือเท่ากับ SET POINT",
+        "- Modbus RTU : สามารถเชื่อมต่อ อ่าน/เขียน ข้อมูล Register ต่างๆได้"
+    ],
+    "BODYSIZE": "850W x 70H x 100D mm.",
+    "DATE": "11/01/2021",
+    "PRICE": "32400",
+    "SALE": {
+        "NAME": "วิรุณ ผ่านจัยหาร",
+        "BRANCH": "ปทุมธานี",
+        "CALL": "0922825550",
+        "EMAIL": "wiroon@primusthai.com",
+        "CUSTOMMER": ""
+    }
+}

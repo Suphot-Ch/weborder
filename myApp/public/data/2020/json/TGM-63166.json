@@ -1,0 +1,46 @@
+{
+    "ORDER": "TGM-63166",
+    "KEYWORD": "TGM-63166 4I4D2R 2M8D1R 1OP_AL RS485 slave",
+    "DISPLAY": "7 Segment",
+    "SIZE": "4 INC",
+    "INPUT": {
+        "TYPE": "Counter NPN PNP Contact",
+        "OTHER": "",
+        "CH": "2"
+    },
+    "OUTPUT": {
+        "TYPE": "Relay Alarm",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "COMMUNICATION": {
+        "TYPE": "RS485 Modbus RTU",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "12VDC 4A",
+    "FUNCTION": [
+        "FUNCTION",
+        "- ตั้งค่า ตัวคูณตัวหารได้ 1 - 999",
+        "- ตั้งค่า ทศนิยมได้",
+        "- ตั้งค่า Setpoint Alarm ได้ 0 – 9999",
+        "- ตั้งค่า Input Mode การนับ ขึ้น/ลง ได้",
+        "FEATURE",
+        "- TARGET แสดงค่า เป้าหมายที่ตั้งค่าด้วย Remote",
+        "- ACTUAL แสดงค่า ของ Counter ที่นับได้",
+        "- สูตร แสดงค่า ตัวอักษรที่บันทึกไว้",
+        "- Set point อิงการทำงานของ Counter",
+        "เมื่อนับขึ้น Setpoint >= Count ให้ Relay Alarm ทำงาน"
+    ],
+    "BODYSIZE": "700W x 600H x 100D mm.",
+    "DATE": "29/12/2020",
+    "PRICE": "32200",
+    "SALE": {
+        "NAME": "วิรุณ",
+        "BRANCH": "ปทุมธานี",
+        "CALL": "09228550",
+        "EMAIL": "boat.twb1@gmail.com",
+        "CUSTOMER": ""
+    }
+}

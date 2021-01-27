@@ -1,0 +1,37 @@
+{
+    "ORDER": "TGM-63157",
+    "KEYWORD": "TGM-63157 2I6D1R 1IP_ENC Counter RS485",
+    "DISPLAY": "7 Segment",
+    "SIZE": "2.3 INC",
+    "INPUT": {
+        "TYPE": "Counter Sensor(pnp npn), Encoder",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "OUTPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "COMMUNICATION": {
+        "TYPE": "RS485 Modbus RTU slave",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "- สามารถนับ Counter ได้ 0 - 999999",
+        "- ตัง้ ค่าตัวคูณ/ตัวหารได้ แบบ Real Time",
+        "- ตัง้ ค่าทศนิยมได้",
+        "- ตัง้ ค่าเลือก Type Input ได้"
+    ],
+    "BODYSIZE": "350W x 200H x 100D mm.",
+    "DATE": "01/12/2020",
+    "PRICE": "13200",
+    "SALE": {
+        "NAME": "Paimanee <paimanee@primusthai.com>",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

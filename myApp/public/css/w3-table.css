@@ -1,0 +1,105 @@
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td, th {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 8px;
+  }
+  /* tr:nth-child(even) {
+    background-color: #dddddd;
+  } */
+/* * {
+    box-sizing: border-box;
+  } */
+input[type=text],input[type=password]{
+    /* width: 200px; */
+    width: 100%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+input[type=number],select{
+    width: 200px;
+    /* width: 100%; */
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+input[type=button], button{
+    width: 100%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    color: white;
+    background-color:#228738;
+}
+input[type=button]:hover {
+    opacity: 0.8;
+}
+button:hover {
+    opacity: 0.8;
+}
+.button-size{
+    width: 200px;
+}
+
+.head-a {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    /* border: solid 1px; */
+}
+.head-b {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    top: 0;
+    right: 0;
+    /* border: solid 1px; */
+}
+.body-a {
+    /* position: absolute; */
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: solid 1px;
+}
+.body-b {
+    /* position: absolute; */
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: solid 1px;
+}
+.header {
+    padding: 10px 16px;
+    border: solid 1px;
+}
+.content {
+    padding: 16px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .content {
+    padding-top: 102px;
+}
+@media only screen and (max-width: 900px) {
+    .button-size{
+        width: 200px;
+    }
+}

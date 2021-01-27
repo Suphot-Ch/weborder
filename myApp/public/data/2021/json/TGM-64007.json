@@ -1,0 +1,50 @@
+{
+  "ORDER": "TGM-64007",
+  "KEYWORD": "TGM-64007 4I3D2R 2AP_4_20mA HM-005-00",
+  "DISPLAY": {
+    "TYPE": "7 Segment",
+    "SIZE": "4\"",
+    "OTHER": ""
+  },
+  "INPUT": {
+    "TYPE": "Analog 4-20mA",
+    "OTHER": "HM-005-00",
+    "CHANNEL": "2"
+  },
+  "OUTPUT": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CHANNEL": ""
+  },
+  "COMMUNICATION": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CHANNEL": ""
+  },
+  "SUPPLY": {
+    "TYPE": "110-240 VAC/ 50-60Hz",
+    "OTHER": ""
+  },
+  "SOURCES": {
+    "TYPE": "other",
+    "OTHER": "PM-025S-2.5"
+  },
+  "FUNCTION": [
+    "FUNCTION",
+    "- แสดงผลตัวเลข 0 - 999",
+    "- กำหนดค่า ทศนิยมได้ 1 ตำแหน่ง",
+    "FEATURE",
+    "- รับ Input Analog 4 – 20 mA แสดงผลบนจอ 7 Segment 4\" 3 หลัก",
+    "- แสดงข้อมูล Temperature และ Humidity ที่วัดค่าได้ จาก HM-005-00 ที่ติดตั้งภายใน Display",
+    "- ติดตั้งห่วงสำหรับแขวน Display ด้านบน"
+  ],
+  "BODYSIZE": "600W x 400H x 100D",
+  "DATE": "2021-01-25",
+  "SALE": {
+    "NAME": "Noppadon Kamsuk",
+    "BRANCH": "-",
+    "CALL": "-",
+    "EMAIL": "-",
+    "CUSTOMER": "-"
+  }
+}
