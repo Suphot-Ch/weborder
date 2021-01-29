@@ -14,7 +14,7 @@
     <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
     <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <!-- <link rel="stylesheet" href="css/w3-table.css"> -->
 
     <title>Web Order</title>
@@ -49,20 +49,20 @@
                     <div style="padding: 5px 5px; width: auto;" >
                         <div style="width: auto; float: left;" >
                             <label style="color:#009688" for="selest-year">Choose year:</label>
-                            <select id="selest-year">
+                            <select id="selest-year" class="inp inpSelect" style="width: 100px;">
                                 <option value="2021">2021</option>
                                 <option value="2020">2020</option>
                                 <!-- <option value="2019">2019</option> -->
                                 <!-- <option value="2018">2018</option> -->
                                 <!-- <option value="2017">2017</option> -->
                             </select>
-                            <button id="btn-apply" style="background-color:#228738; width: 100px;">Apply</button>
+                            <button class="btn btnApply" id="btn-apply">Apply</button>
                         </div>
                     </div><br>
                     <div style="padding: 5px 5px; width: auto"><br>
                         <div style="width: auto;">
                             <label style="color:#009688" for="selest-filter">Choose filter:</label>
-                            <select id="selest-filter">
+                            <select id="selest-filter" class="inp inpSelect" style="width: 150px; display: none;">
                                 <option value="all">all</option>
                                 <option value="input">segment</option>
                                 <option value="input">input</option>
@@ -70,7 +70,7 @@
                                 <option value="communicate">communicate</option>
                                 <option value="detail">detail</option>
                             </select>
-                            <input id="search-table" type="text" style="width: 200px;" placeholder="filter..." title="Type in a name"/>
+                            <input id="search-table" type="text" class="inp inpText" style="width: 200px;" placeholder="filter..." title="Type in a name"/>
                         </div>
                     </div>
                     <tr style="background-color:#228738;color:#fff">
@@ -105,25 +105,26 @@
         <form class="modal-content animate">
           <div class="imgcontainer">
             <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="images/profile.jpg" alt="Avatar" class="avatar">
+            <img src="./images/profile.jpg" alt="Avatar" class="avatar">
           </div>
           <div class="container">
             <div id=al_error></div>
             <label for="uname"><b>Username</b></label>
-            <input class="inputText" type="text" placeholder="Enter Username" id="uname" name="uname">
+            <input class="inp inpUser" type="text" placeholder="Enter Username" id="uname" name="uname">
             <br>
             <label for="psw"><b>Password</b></label>
-            <input class="inputText" type="password" placeholder="Enter Password" id="psw" name="psw">
-            
-            <button type="button"  class="passbtn" onclick="addfile();">Login</button>
+            <input class="inp inpPassword" type="password" placeholder="Enter Password" id="psw" name="psw">
+            <br>
             <label>
               <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
+            </label><br>
           </div>
-      
-          <div class="container" style="background-color:#f1f1f1; display: none;">
-            <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+          <div class="container" style="background-color:#f1f1f1;">
+            <center>
+            <button type="button"  class="btn btnLogin" onclick="addfile();">Login</button>
+            <button type="button" onclick="document.getElementById('login').style.display='none'" class="btn btnCancel">Cancel</button>
+            <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+            </center>
           </div>
         </form>
       </div>

@@ -2,7 +2,8 @@ var media_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var media_width_;
 
 var IndexMain;
-var host = "http://melody-mas.trueddns.com:62284";
+var host = "";
+// var host = "http://melody-mas.trueddns.com:62284";
 // var host = "http://localhost:2021";
 
 console.log(media_width);
@@ -43,99 +44,102 @@ function setTable(json){
     htmx = "";
     htmx += "<tbody>";
     htmx += "<div>";
+    var x_max = Objpoint.length;
+    console.log(x_max);
     for (x in Objpoint) {
+        var xx = (x_max - x)-1;
         htmx += "<tr>";
-        htmx +="     <td id=\"b-model\">"+Objpoint[x].ORDER+"</td>";
-        htmx +="     <td id=\"b-picture\" href=\"" + headWeb + "/" + Years + "/file/" + Objpoint[x].ORDER + ".pdf\"><img width=\"200\"";
-        htmx +="             src=\"" + headWeb + "/" + Years + "/images/" + Objpoint[x].ORDER + ".png\"></td>";
+        htmx +="     <td id=\"b-model\">"+Objpoint[xx].ORDER+"</td>";
+        htmx +="     <td id=\"b-picture\" href=\"" + headWeb + "/" + Years + "/file/" + Objpoint[xx].ORDER + ".pdf\"><img width=\"200\"";
+        htmx +="             src=\"" + headWeb + "/" + Years + "/images/" + Objpoint[xx].ORDER + ".png\"></td>";
         htmx +="     <td id=\"b-display\" >";
-        if(Objpoint[x].DISPLAY.TYPE != null)
-            htmx += Objpoint[x].DISPLAY.TYPE + "<br>";
+        if(Objpoint[xx].DISPLAY.TYPE != null)
+            htmx += Objpoint[xx].DISPLAY.TYPE + "<br>";
         else
-            htmx += Objpoint[x].DISPLAY + "<br>";
-        if(Objpoint[x].SIZE != null)
-            htmx += Objpoint[x].SIZE;
+            htmx += Objpoint[xx].DISPLAY + "<br>";
+        if(Objpoint[xx].SIZE != null)
+            htmx += Objpoint[xx].SIZE;
         else
-            htmx += Objpoint[x].DISPLAY.SIZE + "<br>";
-        if(Objpoint[x].DISPLAY.OTHOR != null)
-            htmx += Objpoint[x].DISPLAY.OTHOR + "<br>";
+            htmx += Objpoint[xx].DISPLAY.SIZE + "<br>";
+        if(Objpoint[xx].DISPLAY.OTHOR != null)
+            htmx += Objpoint[xx].DISPLAY.OTHOR + "<br>";
         htmx +="</td>";
         
         if(media_width >= 600){
             console.log("media width : " + media_width);
             // Colunm Input
             htmx +="<td id=\"b-input\" >";
-            if(Objpoint[x].INPUT.TYPE == "" || Objpoint[x].INPUT.TYPE == "-") {
+            if(Objpoint[xx].INPUT.TYPE == "" || Objpoint[xx].INPUT.TYPE == "-") {
                 htmx +="-";
             }
             else {
-                htmx += Objpoint[x].INPUT.TYPE + "<br>";
-                if(Objpoint[x].INPUT.OTHER != null || Objpoint[x].INPUT.OTHER != "")
-                    htmx += Objpoint[x].INPUT.OTHER + "<br>";
-                if(Objpoint[x].INPUT.CH != null)
-                    htmx += Objpoint[x].INPUT.CH +" ch";
+                htmx += Objpoint[xx].INPUT.TYPE + "<br>";
+                if(Objpoint[xx].INPUT.OTHER != null || Objpoint[xx].INPUT.OTHER != "")
+                    htmx += Objpoint[xx].INPUT.OTHER + "<br>";
+                if(Objpoint[xx].INPUT.CH != null)
+                    htmx += Objpoint[xx].INPUT.CH +" ch";
                 else
-                    htmx += Objpoint[x].INPUT.CHANNEL +" ch";
+                    htmx += Objpoint[xx].INPUT.CHANNEL +" ch";
             }
             htmx +="</td>";
             
             // Colunm Output
             htmx +="<td id=\"b-output\" >";
-            if(Objpoint[x].OUTPUT.TYPE == "" || Objpoint[x].OUTPUT.TYPE == "-") {
+            if(Objpoint[xx].OUTPUT.TYPE == "" || Objpoint[xx].OUTPUT.TYPE == "-") {
                 htmx +="-";
             }
             else {
-                htmx += Objpoint[x].OUTPUT.TYPE + "<br>";
-                if(Objpoint[x].OUTPUT.OTHER != null || Objpoint[x].OUTPUT.OTHER != "")
-                    htmx += Objpoint[x].OUTPUT.OTHER + "<br>";
-                if(Objpoint[x].OUTPUT.CH != null)
-                    htmx += Objpoint[x].OUTPUT.CH +" ch";
+                htmx += Objpoint[xx].OUTPUT.TYPE + "<br>";
+                if(Objpoint[xx].OUTPUT.OTHER != null || Objpoint[xx].OUTPUT.OTHER != "")
+                    htmx += Objpoint[xx].OUTPUT.OTHER + "<br>";
+                if(Objpoint[xx].OUTPUT.CH != null)
+                    htmx += Objpoint[xx].OUTPUT.CH +" ch";
                 else
-                    htmx += Objpoint[x].OUTPUT.CHANNEL +" ch";
+                    htmx += Objpoint[xx].OUTPUT.CHANNEL +" ch";
             }
             htmx +="</td>";
         
             // Colunm COMMUNICATION
             htmx +="<td id=\"b-comm\" >";
-            if(Objpoint[x].COMMUNICATION.TYPE == "" || Objpoint[x].COMMUNICATION.TYPE == "-") {
+            if(Objpoint[xx].COMMUNICATION.TYPE == "" || Objpoint[xx].COMMUNICATION.TYPE == "-") {
                 htmx +="-";
             }
             else {
-                htmx += Objpoint[x].COMMUNICATION.TYPE + "<br>";
-                if(Objpoint[x].COMMUNICATION.OTHER != null || Objpoint[x].COMMUNICATION.OTHER != "")
-                    htmx += Objpoint[x].COMMUNICATION.OTHER + "<br>";
-                if(Objpoint[x].COMMUNICATION.CH != null)
-                    htmx += Objpoint[x].COMMUNICATION.CH +" ch";
+                htmx += Objpoint[xx].COMMUNICATION.TYPE + "<br>";
+                if(Objpoint[xx].COMMUNICATION.OTHER != null || Objpoint[xx].COMMUNICATION.OTHER != "")
+                    htmx += Objpoint[xx].COMMUNICATION.OTHER + "<br>";
+                if(Objpoint[xx].COMMUNICATION.CH != null)
+                    htmx += Objpoint[xx].COMMUNICATION.CH +" ch";
                 else
-                    htmx += Objpoint[x].COMMUNICATION.CHANNEL +" ch";
+                    htmx += Objpoint[xx].COMMUNICATION.CHANNEL +" ch";
             }
             htmx +="</td>";
         }
         
         htmx +="     <td id=\"b-download\" ><a class=\"a-button\"";
-        htmx +="             href=\"" + headWeb + "/" + Years + "/file/" + Objpoint[x].ORDER + ".pdf\">Download</a>";
+        htmx +="             href=\"" + headWeb + "/" + Years + "/file/" + Objpoint[xx].ORDER + ".pdf\">Download</a>";
         htmx +="     </td>";
         
         var detial = "";
         detial +="     <td id=\"b-detail\" >";
-        for(y in Objpoint[x].FUNCTION){
+        for(y in Objpoint[xx].FUNCTION){
             if(y == 4){
                 // detial +="<div class=\"dot\" id=\"dots" + x + "\">...</div>";
-                detial +="<div class=\"more\" id=\"more"+ Years +""+ x + "\">";
+                detial +="<div class=\"more\" id=\"more"+ Years +""+ xx + "\">";
                 detial +="<div>";
-                detial += Objpoint[x].FUNCTION[y];
+                detial += Objpoint[xx].FUNCTION[y];
                 detial +="</div>";
             }
-            else if(y > 4 && y == Objpoint[x].FUNCTION.length - 1){
+            else if(y > 4 && y == Objpoint[xx].FUNCTION.length - 1){
                 detial +="<div>";
-                detial += Objpoint[x].FUNCTION[y];
+                detial += Objpoint[xx].FUNCTION[y];
                 detial +="</div>";
                 detial +="</div>";
-                detial +="<a href=\"#view\" onclick=\"readMore("+ Years + x + ",0);\" id=\"myBtn"+ Years + x + "\">read more...</a>";
+                detial +="<a href=\"#view\" onclick=\"readMore("+ Years + xx + ",0);\" id=\"myBtn"+ Years + xx + "\">read more...</a>";
             }
             else{
                 detial +="<div>";
-                detial += Objpoint[x].FUNCTION[y];
+                detial += Objpoint[xx].FUNCTION[y];
                 detial +="</div>";
             }
         }
@@ -183,7 +187,7 @@ function setTable(json){
             readMore(Years +""+ x, 1);
         }
     }
-    if(media_width < 900){
+    if(media_width < 600){
         document.getElementById('selest-filter').style.display = "none";
         document.getElementById('search-table').style.display = "none";
     }else{
