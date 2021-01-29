@@ -14,33 +14,33 @@
         <div class="centered" id="alarm"></div>
         <div class="centered" id="div-order">
             <label align="left" for="ip-order">Order Name</label><br>
-            <input class="inputText" id="ip-order" name="ip_order" style="width: 100%;" placeholder="Enter order">
+            <input class="inpText" id="ip-order" name="ip_order" style="width: 100%;" placeholder="Enter order">
         </div>
         <div class="centered" id="div-keyword">
             <label align="left" for="ip-keyword">Keyword</label><br>
-            <input class="inputText" id="ip-keyword" name="ip_keyword" style="width: 100%;" placeholder="Enter Keyword">
+            <input class="inpText" id="ip-keyword" name="ip_keyword" style="width: 100%;" placeholder="Enter Keyword">
         </div>
         <div class="centered" id="div-display">
             <label align="left" for="ip-display-type">Display</label><br>
-            <select class="inputText" id="ip-display-type" name="ip_display_type" style="width: 300px;">
+            <select class="inpText" id="ip-display-type" name="ip_display_type" style="width: 300px;">
                 <option value="-">None</option>
                 <option value="7 Segment">7 Segment</option>
                 <option value="Matrix">Matrix 8x8</option>
                 <option value="other">Other</option>
             </select>
-            <select class="inputText" id="ip-display-seg-size" name="ip_display_seg_size" style="width: 300px; display: none;">
+            <select class="inpText" id="ip-display-seg-size" name="ip_display_seg_size" style="width: 300px; display: none;">
                 <option value='1.2"'>1.2"</option>
                 <option value='2.3"'>2.3"</option>
                 <option value='4"'>4"</option>
                 <option value='8"'>8"</option>
                 <option value='12"'>12"</option>
             </select>
-            <select class="inputText" id="ip-display-matric-size" name="ip_display_matric_size" style="width: 300px; display: none;">
+            <select class="inpText" id="ip-display-matric-size" name="ip_display_matric_size" style="width: 300px; display: none;">
                 <option value='2.3" 5x7'>2.3" 5x7</option>
                 <option value='2.3" 8x8'>2.3" 8x8</option>
                 <option value='4" 5x7'>4" 5x7</option>
             </select><br>
-            <input class="inputText" id="ip-display-other" name="ip_display_other" placeholder="Enter other data">
+            <input class="inpText" id="ip-display-other" name="ip_display_other" placeholder="Enter other data">
             <input type="button" id="ip-display-add-1" value="+">
             <script>
                 document.getElementById('ip-display-type').addEventListener('change', function(){
@@ -64,25 +64,25 @@
             </script>
         </div>
         <div class="centered" id="div-display-2" style="display: none;">
-            <select class="inputText" id="ip-display-type-2" name="ip_display_type_2" style="width: 300px;">
+            <select class="inpText" id="ip-display-type-2" name="ip_display_type_2" style="width: 300px;">
                 <option value="-">None</option>
                 <option value="7 Segment">7 Segment</option>
                 <option value="Matrix">Matrix 8x8</option>
                 <option value="other">Other</option>
             </select>
-            <select class="inputText" id="ip-display-seg-size-2" name="ip_display_seg_size_2" style="width: 300px; display: none;">
+            <select class="inpText" id="ip-display-seg-size-2" name="ip_display_seg_size_2" style="width: 300px; display: none;">
                 <option value='1.2"'>1.2"</option>
                 <option value='2.3"'>2.3"</option>
                 <option value='4"'>4"</option>
                 <option value='8"'>8"</option>
                 <option value='12"'>12"</option>
             </select>
-            <select class="inputText" id="ip-display-matric-size-2" name="ip_display_matric_size_2" style="width: 300px; display: none;">
+            <select class="inpText" id="ip-display-matric-size-2" name="ip_display_matric_size_2" style="width: 300px; display: none;">
                 <option value='2.3" 5x7'>2.3" 5x7</option>
                 <option value='2.3" 8x8'>2.3" 8x8</option>
                 <option value='4" 5x7'>4" 5x7</option>
             </select><br>
-            <input class="inputText" id="ip-display-other-2" name="ip_display_other_2" placeholder="Enter other data">
+            <input class="inpText" id="ip-display-other-2" name="ip_display_other_2" placeholder="Enter other data">
             <input type="button" id="ip-display-delete-1" value="-">
             <script>
                 document.getElementById('ip-display-type-2').addEventListener('change', function(){
@@ -107,7 +107,7 @@
         </div>
         <div class="centered" id="div-input">
             <label align="left" for="ip-input">Input</label><br>
-            <select class="inputText" id="ip-input" name="ip_input" style="width: 300px;">
+            <select class="inpText" id="ip-input" name="ip_input" style="width: 300px;">
                 <option value="-">None</option>
                 <option value="Analog 4-20mA">Analog 4-20mA</option>
                 <option value="Analog 0-10VDC">Analog 0-10VDC</option>
@@ -117,8 +117,8 @@
                 <option value="Contact Timer">Contact Timer</option>
                 <option value="-">Other</option>
             </select><br>
-            <input class="inputText" id="ip-input-other" name="ip_input_other" placeholder="Enter other input"><br>
-            <input class="inputNumber" id="ip-input-ch" name="ip_input_ch" type="number" placeholder="channel">
+            <input class="inpText" id="ip-input-other" name="ip_input_other" placeholder="Enter other input"><br>
+            <input class="inpNumber" id="ip-input-ch" name="ip_input_ch" type="number" placeholder="channel">
             <input type="button" id="ip-input-add-1" value="+">
             <script>
                 document.querySelector('#ip-input-add-1').addEventListener('click', function () {
@@ -128,7 +128,7 @@
             </script>
         </div>
         <div class="centered" id="div-input-2" style="display: none;">
-            <select class="inputText" id="ip-input-2" name="ip_input_2" style="width: 300px;">
+            <select class="inpText" id="ip-input-2" name="ip_input_2" style="width: 300px;">
                 <option value="-">None</option>
                 <option value="Analog 4-20mA">Analog 4-20mA</option>
                 <option value="Analog 0-10VDC">Analog 0-10VDC</option>
@@ -138,9 +138,9 @@
                 <option value="Contact Timer">Contact Timer</option>
                 <option value="-">Other</option>
             </select><br>
-            <input class="inputText" id="ip-input-2-other" name="ip_input_2_other"
+            <input class="inpText" id="ip-input-2-other" name="ip_input_2_other"
                 placeholder="Enter other input"><br>
-            <input class="inputNumber" id="ip-input-2-ch" name="ip_input_2_ch" type="number"
+            <input class="inpNumber" id="ip-input-2-ch" name="ip_input_2_ch" type="number"
                 placeholder="channel">
             <input type="button" id="ip-input-delete-1" value="-">
             <script>
@@ -152,17 +152,17 @@
         </div>
         <div class="centered" id="div-output">
             <label align="left" for="ip-output">Output</label><br>
-            <select class="inputText" id="ip-output" name="ip_output" style="width: 300px;">
+            <select class="inpText" id="ip-output" name="ip_output" style="width: 300px;">
                 <option value="-">None</option>
                 <option value="Relay Alarm">Relay Alarm</option>
                 <option value="-">Other</option>
             </select><br>
-            <input class="inputText" id="ip-output-other" name="ip_output_other" placeholder="Enter other output"><br>
-            <input class="inputNumber" id="ip-output-ch" name="ip_output_ch" type="number" placeholder="channel">
+            <input class="inpText" id="ip-output-other" name="ip_output_other" placeholder="Enter other output"><br>
+            <input class="inpNumber" id="ip-output-ch" name="ip_output_ch" type="number" placeholder="channel">
         </div>
         <div class="centered" id="div-comm">
             <label align="left" for="ip-comm">Communication</label><br>
-            <select class="inputText" id="ip-comm" name="ip_comm" style="width: 300px;">
+            <select class="inpText" id="ip-comm" name="ip_comm" style="width: 300px;">
                 <option value="-">None</option>
                 <option value="RS485 MB RTU Slave">RS485 MB RTU Slave</option>
                 <option value="RS485 MB RTU Master">RS485 MB RTU Master</option>
@@ -170,66 +170,66 @@
                 <option value="RS485 MB ASCII Master">RS485 MB ASCII Master</option>
                 <option value="-">Other</option>
             </select><br>
-            <input class="inputText" id="ip-comm-other" name="ip_comm_other"
+            <input class="inpText" id="ip-comm-other" name="ip_comm_other"
                 placeholder="Enter other communication"><br>
-            <input class="inputNumber" id="ip-comm-ch" name="ip_comm_ch" type="number" placeholder="channel">
+            <input class="inpNumber" id="ip-comm-ch" name="ip_comm_ch" type="number" placeholder="channel">
         </div>
         <div class="centered" id="div-supply">
             <label align="left" for="ip-supply">Input Power Supply</label><br>
-            <select class="inputText" id="ip-supply" name="ip_supply" style="width: 300px;">
+            <select class="inpText" id="ip-supply" name="ip_supply" style="width: 300px;">
                 <option value="110-240 VAC/ 50-60Hz">110-240 VAC/ 50-60Hz</option>
                 <option value="24VDC >1A">24VDC >1A</option>
                 <option value="-">Other</option>
             </select><br>
-            <input class="inputText" id="ip-supply-other" name="ip_supply_other" placeholder="Enter other supply">
+            <input class="inpText" id="ip-supply-other" name="ip_supply_other" placeholder="Enter other supply">
         </div>
         <div class="centered" id="div-source">
             <label align="left" for="ip-source">Source</label><br>
-            <select class="inputText" id="ip-source" name="ip_source" style="width: 300px;">
+            <select class="inpText" id="ip-source" name="ip_source" style="width: 300px;">
                 <option value="-">None</option>
                 <option value="24VDC 130mA / SP 240VAC">24VDC 130mA / SP 240VAC</option>
                 <option value="12VDC 4A / SP 240VAC">12VDC 4A / SP 240VAC</option>
                 <option value="24VDC as supply / SP 24VDC">24VDC as supply / SP 24VDC</option>
                 <option value="other">Other</option>
             </select><br>
-            <input class="inputText" id="ip-source-other" name="ip_source_other" placeholder="Enter other source">
+            <input class="inpText" id="ip-source-other" name="ip_source_other" placeholder="Enter other source">
         </div>
         <div class="centered" id="div-function">
             <label align="left" for="ip-function">Detial function</label><br>
-            <textarea class="inputText" style="width: 100%;" id="ip-function" name="ip_function"
+            <textarea class="inpText" style="width: 100%;" id="ip-function" name="ip_function"
                 placeholder="Enter function" rows="10" cols="100"></textarea>
         </div>
         <div class="centered" id="div-size">
             <label align="left" for="ip-size">Size</label><br>
             <div style="width: 100%;">
-                <input type="number" style="width: 100px;" class="inputNumber" id="ip-size-w" name="ip_size_w">W x
-                <input type="number" style="width: 100px;" class="inputNumber" id="ip-size-h" name="ip_size_h">H x
-                <input type="number" style="width: 100px;" class="inputNumber" id="ip-size-d" name="ip_size_d">D
+                <input type="number" style="width: 100px;" class="inpNumber" id="ip-size-w" name="ip_size_w">W x
+                <input type="number" style="width: 100px;" class="inpNumber" id="ip-size-h" name="ip_size_h">H x
+                <input type="number" style="width: 100px;" class="inpNumber" id="ip-size-d" name="ip_size_d">D
             </div>
         </div>
         <div class="centered" id="div-date">
             <label align="left" for="ip-date">Date</label><br>
-            <input class="inputText" id="ip-date" name="ip_date" type="date">
+            <input class="inpText" id="ip-date" name="ip_date" type="date">
         </div>
         <div class="centered" id="div-price">
             <label align="left" for="ip-price">Price</label><br>
-            <input class="inputText" id="ip-price" name="ip_price" type="number">
+            <input class="inpText" id="ip-price" name="ip_price" type="number">
         </div>
         <div class="centered" id="div-sale">
             <label align="left" for="ip-sale-name">Sale Name</label><br>
-            <input class="inputText" id="ip-sale-name" name="ip_sale_name"><br>
+            <input class="inpText" id="ip-sale-name" name="ip_sale_name"><br>
             <label align="left" for="ip-sale-branch">Sale Branch</label><br>
-            <input class="inputText" id="ip-sale-branch" name="ip_sale_branch"><br>
+            <input class="inpText" id="ip-sale-branch" name="ip_sale_branch"><br>
             <label align="left" for="ip-sale-call">Sale Call</label><br>
-            <input class="inputText" id="ip-sale-call" name="ip_sale_call"><br>
+            <input class="inpText" id="ip-sale-call" name="ip_sale_call"><br>
             <label align="left" for="ip-sale-email">Sale Email</label><br>
-            <input class="inputText" id="ip-sale-email" name="ip_sale_email"><br>
+            <input class="inpText" id="ip-sale-email" name="ip_sale_email"><br>
             <label align="left" for="ip-sale-cumtomer">Sale Customer</label><br>
-            <input class="inputText" id="ip-sale-cumtomer" name="ip_sale_cumtomer"><br>
+            <input class="inpText" id="ip-sale-cumtomer" name="ip_sale_cumtomer"><br>
         </div>
         <div class="centered" id="div-sale">
-            <button class="passbtn" id="btn-submit-add">Add data</button>
-            <button class="cancelbtn" id="btn-clear-add">Clear data</button>
+            <button class="btn btnPass" id="btn-submit-add">Add data</button>
+            <button class="btn btnCancel" id="btn-clear-add">Clear data</button>
         </div>
     </div>
 </body>

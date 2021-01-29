@@ -4,7 +4,7 @@
 <title>TIMER COUNTER</title>
 <style>   
 /* Set a style for all buttons */
-.passbtn {
+.btnPass {
     color: white;
     padding: 20px 20px;
     margin: 0px 0;
@@ -14,7 +14,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2em; /* 14px/16=0.875em */
 }
-.passbtn:hover{
+.btnPass:hover{
     opacity: 0.8;
 }
 h1 {
@@ -30,9 +30,8 @@ h1 {
         <div><h1>TIMER COUNTER</h1></div>
         <div><h1 class="time"><p id="timer"></p></h1></div>
         <div>
-            <input type="button" class="passbtn" style="background-color: #00c507" id="Start" value="START">
-            <!-- <button class="passbtn" style="background-color: #ff2d1e" id="Stop"><h2>STOP</h2></button> -->
-            <input type="button" class="passbtn" style="background-color: #1e40ff"id="Reset" value="RESET"></div>
+            <input type="button" class="btnPass" style="background-color: #00c507" id="Start" value="START">
+            <input type="button" class="btnPass" style="background-color: #1e40ff"id="Reset" value="RESET"></div>
     </center>
     <script>
         var status = 'off';
