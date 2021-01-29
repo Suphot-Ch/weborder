@@ -2,6 +2,8 @@ var media_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var media_width_;
 
 var IndexMain;
+var host = "http://melody-mas.trueddns.com:62284";
+// var host = "http://localhost:2021";
 
 console.log(media_width);
 const ttx = setInterval(function() {
@@ -16,7 +18,7 @@ const ttx = setInterval(function() {
 function readTextFile() {
     var Obj, stObj;
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", url, false);
+    rawFile.open("GET", host+url, false);
     rawFile.onreadystatechange = function () {
         if (rawFile.readyState === 4) {
             if (rawFile.status === 200 || rawFile.status == 0) {
@@ -198,7 +200,7 @@ function loadtable(){
     var Years = document.querySelector('#selest-year').value;
     url = "/read?YEAR=" + Years;
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", url, false);
+    rawFile.open("GET", host+url, false);
     rawFile.onreadystatechange = function () {
         if (rawFile.readyState === 4) {
             if (rawFile.status === 200 || rawFile.status == 0) {
@@ -237,7 +239,7 @@ function readMore(order, sett) {
   const getjsonformhost = (method, URLLoad, status) => {
       let Obj, stObj;
       let rawFile = new XMLHttpRequest();
-      rawFile.open(method, URLLoad, false);
+      rawFile.open(method, host+URLLoad, false);
       rawFile.onreadystatechange = function () {
           status = rawFile.status;
           if (rawFile.readyState === 4) {
@@ -254,9 +256,22 @@ function readMore(order, sett) {
   };
   function addfile() {
     let status;
-    var data = getjsonformhost('get', '/read/login?user=Suphot&pass=00000000', status);
+    let user = document.getElementById('uname').value;
+    let pass = document.getElementById('psw').value;
+    var data = getjsonformhost('get', '/read/login?user=' + user + '&pass=' + pass, status);
+    user = "";
+    pass = "";
+    document.getElementById('uname').value = "";
+    document.getElementById('psw').value = "";
     console.log(data);
-    if(data.sData.status == "true"){
+    if(data.sData.status == "true")
+    {
+        document.getElementById('login').style.display='none';
         window.open(data.sData.path);
+    }
+    else
+    {
+        var htm ="<center>"+data.sData.status+"</center>"
+        document.getElementById('al_error').innerHTML = htm;
     }
   }

@@ -4,6 +4,7 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 const { send } = require('process');
+const { request } = require('../app');
 const app = require('../app');
 var appJson = require('./app/app-json');
 var fn = require('./app/global');
@@ -59,9 +60,25 @@ router.get('/', function (req, res, next) {
 
 router.get('/login', function (req, res, next) {  
     console.log(req.query);
+    var idname = require('./json/user.json');
+    var status = "false";
+    for(x in idname){
+        if(idname[x].name == req.query.user || idname[x].email == req.query.user)
+        {
+            if(idname[x].password == req.query.pass)
+            {
+                status = "true";
+                break;
+            }
+            else
+                status = "Password Error";
+        }
+        else
+            status = "User Error";
+    }
     var login={
-        status:"true",
-        path:"add.html"
+        status:status,
+        path:status!="true"? "" : "add.html"
     };
     var alarm = {
         status: "true",
