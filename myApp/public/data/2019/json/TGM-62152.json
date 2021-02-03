@@ -1,0 +1,34 @@
+{
+  "ORDER": "TGM-62152",
+  "KEYWORD": "TGM-62152",
+  "DISPLAY": "-",
+  "SIZE": "-",
+  "INPUT": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CH": ""
+  },
+  "OUTPUT": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CH": ""
+  },
+  "COMMUNICATION": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CH": ""
+  },
+  "SUPPLY": "110-240 VAC",
+  "SOURCE": "",
+  "FUNCTION": [],
+  "BODYSIZE": "W x H x D mm.",
+  "DATE": "",
+  "PRICE": "",
+  "SALE": {
+    "NAME": "",
+    "BRANCH": "",
+    "CALL": "",
+    "EMAIL": "",
+    "CUSTOMMER": ""
+  }
+}

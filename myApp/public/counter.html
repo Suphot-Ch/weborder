@@ -1,65 +1,154 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>TIMER COUNTER</title>
-<style>   
-/* Set a style for all buttons */
-.btnPass {
-    color: white;
-    padding: 20px 20px;
-    margin: 0px 0;
-    border: none;
-    cursor: pointer;
-    width: 200px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2em; /* 14px/16=0.875em */
-}
-.btnPass:hover{
-    opacity: 0.8;
-}
-h1 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.time {
-    font-size: 5em; /* 14px/16=0.875em */
-}
-</style>
+    <title>TIMER COUNTER</title>
+    <style>
+        /* Set a style for all buttons */
+        .btnPass {
+            color: white;
+            padding: 20px 20px;
+            margin: 0px 0;
+            border: none;
+            cursor: pointer;
+            width: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            /* 14px/16=0.875em */
+        }
+
+        .btnPass:hover {
+            opacity: 0.8;
+        }
+
+        .head {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+        }
+        .time-h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 60px;
+        }
+        .time-h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+        .time-h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+        .time-input {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            width: 200px;
+            text-align: right;
+        }
+        .time-input-check {
+            width: 30px; 
+            height: 30px; 
+        }
+        .time-p {
+            border: 1px solid green;
+        }
+        div {
+            border: 0px outset gray;
+        }
+        .time-div {
+            /* border: 1px solid black; */
+            padding: 1px 1px;
+
+        }
+    </style>
 </head>
 <body>
     <center>
-        <div><h1>TIMER COUNTER</h1></div>
-        <div><h1 class="time"><p id="timer"></p></h1></div>
+        <div>
+            <h1 class="head">TIMER COUNTER</h1>
+        </div>
+        <div class="time-div">
+            <h1 class="time-h1" >
+                <p class="p-time" id="timer">0.00</p>
+            </h1>
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label class="time-h2" for="set-time">Set Point </label></td>
+                            <td><input class="time-input" type="number" id="set-time" name="set_time" value="10" placeholder="0"></td>
+                            <td style="width: 100px; text-align: center;">
+                                <input class="time-input-check" type="checkbox" id="check-set-time" name="check_set_time" placeholder="0">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label class="time-h2" for="reset-time">Reset Point </label></td>
+                            <td><input class="time-input" type="number" id="reset-time" name="reset_time" value="0" placeholder="0"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><br>
+        </div>
         <div>
             <input type="button" class="btnPass" style="background-color: #00c507" id="Start" value="START">
-            <input type="button" class="btnPass" style="background-color: #1e40ff"id="Reset" value="RESET"></div>
+            <input type="button" class="btnPass" style="background-color: #1e40ff" id="Reset" value="RESET">
+        </div>
+
     </center>
-    <script>
-        var status = 'off';
-        var timer = 0;
-        document.getElementById('Start').addEventListener('click',function() {
-            if(status == 'on') {
-                status = 'off';
-                document.getElementById('Start').style.backgroundColor = "#00c507";
-                document.getElementById('Start').value = "START";
+    <script type="text/javascript">
+        var timerLabel = document.getElementById("timer");
+        var Setpoint = document.getElementById("set-time");
+        var CheckSetpoint = document.getElementById("check-set-time");
+        var Resetpoint = document.getElementById("reset-time");
+        var KeyStart = document.getElementById('Start');
+        var KeyReset = document.getElementById('Reset');
+
+        var SetPointValue = Setpoint.value = 10;
+        var ResetPointValue = Resetpoint.value = 0;
+        var totalSeconds = 0;
+        Setpoint.addEventListener('keyup', function () { SetPointValue = Setpoint.value; console.log(Setpoint.value); });
+        Resetpoint.addEventListener('keyup', function () { ResetPointValue = Resetpoint.value; console.log(Resetpoint.value); });
+        KeyStart.addEventListener('click', function () {
+            if (KeyStart.value == "STOP") {
+                KeyStart.style.backgroundColor = "#00c507";
+                KeyStart.value = "RESUME";
             } else {
-                status = 'on';
-                document.getElementById('Start').style.backgroundColor = "#ff2d1e";
-                document.getElementById('Start').value = "STOP";
+                KeyStart.style.backgroundColor = "#ff2d1e";
+                KeyStart.value = "STOP";
             }
         });
-        document.getElementById('Reset').addEventListener('click',function() {
-            status = 'off';
-            document.getElementById('Start').style.backgroundColor = "#00c507";
-            document.getElementById('Start').value = "START";
-            timer = 0;
+        KeyReset.addEventListener('click', function () {
+            KeyStart.style.backgroundColor = "#00c507";
+            KeyStart.value = "START";
+            totalSeconds = ResetPointValue * 100;
         });
-        var tim = setInterval(function() {
-            if(status == 'on')
-                timer ++;
-            var htm = "";
-            htm += parseInt(timer/10) + "." + parseInt(timer % 10);
-            document.getElementById('timer').innerHTML = htm;
-        }, 100);
+        function pad(val) {
+            var valString = val + "";
+            if (valString.length < 2) {
+                return "0" + valString;
+            }
+            else {
+                return valString;
+            }
+        }
+        function setTime() {
+            if (KeyStart.value == "STOP") {
+                totalSeconds++;
+            }
+        }
+        function runTime() {
+            var htm = parseInt(totalSeconds / 100) + "." + pad(totalSeconds % 100) + " s";
+            timerLabel.innerHTML = htm;
+            if (KeyStart.value == "STOP" && CheckSetpoint.checked == true) {
+                if(totalSeconds >= SetPointValue * 100) {
+                    KeyStart.style.backgroundColor = "#00c507";
+                    KeyStart.value = "RESUME";
+                    alert("Timer >= " + SetPointValue + "Sec.");
+                }
+            }
+        }
+        setInterval(setTime, 10);
+        setInterval(runTime, 10);
+
     </script>
 </body>
+
 </html>

@@ -1,20 +1,3 @@
-var media_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-var media_width_;
-
-var IndexMain;
-var host = "";
-// var host = "http://melody-mas.trueddns.com:62284";
-// var host = "http://localhost:2021";
-
-console.log(media_width);
-const ttx = setInterval(function() {
-    media_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    if(media_width_ != media_width){
-        media_width_ = media_width;
-        setTable(IndexMain);
-    }
-}, 500);
-
 /*################## JavaScript ###################*/
 function readTextFile() {
     var Obj, stObj;
@@ -188,11 +171,11 @@ function setTable(json){
         }
     }
     if(media_width < 600){
-        document.getElementById('selest-filter').style.display = "none";
-        document.getElementById('search-table').style.display = "none";
+        // document.getElementById('selest-filter').style.display = "none";
+        // document.getElementById('search-table').style.display = "none";
     }else{
-        document.getElementById('selest-filter').style.display = "initial";
-        document.getElementById('search-table').style.display = "initial";
+        // document.getElementById('selest-filter').style.display = "initial";
+        // document.getElementById('search-table').style.display = "initial";
     }
     set_sort(404, 1);
 }
