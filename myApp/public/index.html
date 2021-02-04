@@ -14,28 +14,36 @@
     <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
     <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="css/w3-table.css">
-    <title>Test read json</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!-- <link rel="stylesheet" href="css/w3-table.css"> -->
+
+    <title>Web Order</title>
     <link rel="icon"
         href="https://user-images.githubusercontent.com/11943860/42296280-559c07f0-7fca-11e8-9a50-4fccde0b86cb.png"
         type="image/x-icon">
+    <!-- <script src="./jquary/3.2.1/jquery.min.js"></script> -->
+    <script src="./Jquary/3.5.1/jquery.min.js"></script>
+    <script src="./js/get-function.js"></script>
+    <script src="./js/var-data.js"></script>
     <script src="./typedef.js"></script>
-    <script src="./Jquary/jquery.min.js"></script>
 </head>
-
 <style>
 </style>
 
-<body onpageshow="loadtable()">
+<body onpageshow="setTimeout(loadtable, 2000);">
     <div class="centered w3-container" id="alarm"></div>
     <header class="w3-container" style="background-color:#228738;color:#fff">
-        <p><a href="#add" onclick="addfile();">Add Order</a></p>
-        <!-- <p id="s-screen"></p>
-        <script>
-          var x = "Total Width: " + screen.width + "px";
-          document.getElementById("s-screen").innerHTML = x;
-        </script> -->
+        <a href="#add" onclick="document.getElementById('login').style.display='block'" style="width:auto;">
+            <div style="margin: 5px 5px;">Add Order</div>
+        </a>
     </header>
+    <!-- <center><p id="s-screen"></p></center>
+    <script>
+        setInterval(function(){
+            var x = "Total Width: " + media_width + "px IP=" + public_ip;
+            document.getElementById("s-screen").innerHTML = x;
+        },100);
+    </script> -->
     <!-- <div class="w3-container" id="minimize">
     </div> -->
     <div class="w3-container">
@@ -47,28 +55,28 @@
                     <div style="padding: 5px 5px; width: auto;" >
                         <div style="width: auto; float: left;" >
                             <label style="color:#009688" for="selest-year">Choose year:</label>
-                            <select id="selest-year">
+                            <select id="selest-year" class="inp inpSelect" style="width: 100px;">
                                 <option value="2021">2021</option>
                                 <option value="2020">2020</option>
-                                <!-- <option value="2019">2019</option> -->
-                                <!-- <option value="2018">2018</option> -->
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
                                 <!-- <option value="2017">2017</option> -->
                             </select>
-                            <button id="btn-apply" style="background-color:#228738; width: 100px;">Apply</button>
+                            <button class="btn btnApply" id="btn-apply">Apply</button>
                         </div>
                     </div><br>
                     <div style="padding: 5px 5px; width: auto"><br>
                         <div style="width: auto;">
                             <label style="color:#009688" for="selest-filter">Choose filter:</label>
-                            <select id="selest-filter">
+                            <!-- <select id="selest-filter" class="inp inpSelect" style="width: 150px; display: none;">
                                 <option value="all">all</option>
                                 <option value="input">segment</option>
                                 <option value="input">input</option>
                                 <option value="output">output</option>
                                 <option value="communicate">communicate</option>
                                 <option value="detail">detail</option>
-                            </select>
-                            <input id="search-table" type="text" style="width: 200px;" placeholder="filter..." title="Type in a name"/>
+                            </select> -->
+                            <input id="search-table" type="text" class="inp inpText" style="width: 200px;" placeholder="filter..." title="Type in a name"/>
                         </div>
                     </div>
                     <tr style="background-color:#228738;color:#fff">
@@ -89,61 +97,58 @@
                 </thead>
             </div>
             <div class="content">
-            <!-- <p id="loadTable"></p> -->
                 <tbody id="loadTable">
-                    <!-- <div>
-                        <tr>
-                            <td>TGM-63001</td>
-                            <td><img width="200"
-                                    src="https://www.primusthai.com/Rddocs/TGM/order/2020/images/TGM-63001.png"></td>
-                            <td>Analog 4-20mA 1 ch</td>
-                            <td>Relay Alarm 1 ch</td>
-                            <td><a class="a-button"
-                                    href="https://www.primusthai.com/Rddocs/TGM/order/2020/file/TGM-63001.pdf">Download</a>
-                            </td>
-                            <td>
-                                <div>
-                                    - Fix Bug Calendar can't open
-                                    <br>- Fix Bugฺ Horizontal Bar color display
-                                    <br>- Update Hidden menu bar
-                                    <br>- Update Text Font style at message box
-                                    <br>- Update switch element in map diagram
-                                    <br>- Update style Bar graph in map diagram
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>TGM-63002</td>
-                            <td><img width="200"
-                                    src="https://www.primusthai.com/Rddocs/TGM/order/2020/images/TGM-63001.png"></td>
-                            <td>Digital Counter 1 ch</td>
-                            <td>Relay Alarm 1 ch</td>
-                            <td><a class="a-button"
-                                    href="https://www.primusthai.com/Rddocs/TGM/order/2020/file/TGM-63001.pdf">Download</a>
-                            </td>
-                            <td>
-                                <div>
-                                    - Fix Bug Calendar can't open
-                                </div>
-                            </td>
-                        </tr>
-                    </div> -->
-                    <!-- <div id="loadTable"></div> -->
                 </tbody>
             </div>
         </table>
         <div>
-            <a class="a-button" href="/Rddocs/Prisoft/FAQ" target="_blank">FAQ</a>
+            <a class="a-button" href="#FAQ" target="_blank">FAQ</a>
         </div>
     </div>
     <br>
 
+    <div id="login" class="modal">
+        <form class="modal-content animate">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="./images/profile.jpg" alt="Avatar" class="avatar">
+          </div>
+          <div class="container">
+            <div id=al_error></div>
+            <label for="uname"><b>Username</b></label>
+            <input class="inp inpUser" type="text" placeholder="Enter Username" id="uname" name="uname">
+            <br>
+            <label for="psw"><b>Password</b></label>
+            <input class="inp inpPassword" type="password" placeholder="Enter Password" id="psw" name="psw">
+            <br>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label><br>
+          </div>
+          <div class="container" style="background-color:#f1f1f1;">
+            <center>
+            <button type="button"  class="btn btnLogin" onclick="addfile();">Login</button>
+            <button type="button" onclick="document.getElementById('login').style.display='none'" class="btn btnCancel">Cancel</button>
+            <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+            </center>
+          </div>
+        </form>
+      </div>
+      <script>
+      // Get the modal
+      var modal = document.getElementById('login');
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      </script>
     <script>
         window.onscroll = function() {myFunction()};
         
         var header = document.getElementById("myHeader");
         var sticky = header.offsetTop;
-        
         function myFunction() {
             if (window.pageYOffset > sticky) {
                 header.classList.add("sticky");

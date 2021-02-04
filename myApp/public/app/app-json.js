@@ -1,5 +1,5 @@
 var fs = require('fs');
-let debuged = true;
+let debuged = false;
 
 const data2Json = (datain) =>
 {

@@ -1,22 +1,8 @@
-var media_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-var media_width_;
-
-var IndexMain;
-
-console.log(media_width);
-const ttx = setInterval(function() {
-    media_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    if(media_width_ != media_width){
-        media_width_ = media_width;
-        setTable(IndexMain);
-    }
-}, 500);
-
 /*################## JavaScript ###################*/
 function readTextFile() {
     var Obj, stObj;
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", url, false);
+    rawFile.open("GET", host+url, false);
     rawFile.onreadystatechange = function () {
         if (rawFile.readyState === 4) {
             if (rawFile.status === 200 || rawFile.status == 0) {
@@ -30,6 +16,20 @@ function readTextFile() {
     }
     rawFile.send("x=" + stObj);
 }
+function dataServer(method, host, url){
+    var data;
+    var rawFile = new XMLHttpRequest();
+    rawFile.open(method, host + url, false);
+    rawFile.onreadystatechange = function () {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status == 0) {
+                data = this.responseText;
+            }
+        }
+    }
+    rawFile.send("x=" + data);
+    return data;
+}
 function setTable(json){
     var htmx = '';
     var Objpoint;
@@ -41,99 +41,101 @@ function setTable(json){
     htmx = "";
     htmx += "<tbody>";
     htmx += "<div>";
+    var x_max = Objpoint.length;
+    console.log("Order length : " + x_max);
     for (x in Objpoint) {
+        var xx = (x_max - x)-1;
         htmx += "<tr>";
-        htmx +="     <td id=\"b-model\">"+Objpoint[x].ORDER+"</td>";
-        htmx +="     <td id=\"b-picture\" href=\"" + headWeb + "/" + Years + "/file/" + Objpoint[x].ORDER + ".pdf\"><img width=\"200\"";
-        htmx +="             src=\"" + headWeb + "/" + Years + "/images/" + Objpoint[x].ORDER + ".png\"></td>";
+        htmx +="     <td id=\"b-model\">"+Objpoint[xx].ORDER+"</td>";
+        htmx +="     <td id=\"b-picture\" href=\"" + headWeb + "/" + Years + "/file/" + Objpoint[xx].ORDER + ".pdf\"><img width=\"200\"";
+        htmx +="             src=\"" + headWeb + "/" + Years + "/images/" + Objpoint[xx].ORDER + ".png\"></td>";
         htmx +="     <td id=\"b-display\" >";
-        if(Objpoint[x].DISPLAY.TYPE != null)
-            htmx += Objpoint[x].DISPLAY.TYPE + "<br>";
+        if(Objpoint[xx].DISPLAY.TYPE != null)
+            htmx += Objpoint[xx].DISPLAY.TYPE + "<br>";
         else
-            htmx += Objpoint[x].DISPLAY + "<br>";
-        if(Objpoint[x].SIZE != null)
-            htmx += Objpoint[x].SIZE;
+            htmx += Objpoint[xx].DISPLAY + "<br>";
+        if(Objpoint[xx].SIZE != null)
+            htmx += Objpoint[xx].SIZE;
         else
-            htmx += Objpoint[x].DISPLAY.SIZE + "<br>";
-        if(Objpoint[x].DISPLAY.OTHOR != null)
-            htmx += Objpoint[x].DISPLAY.OTHOR + "<br>";
+            htmx += Objpoint[xx].DISPLAY.SIZE + "<br>";
+        if(Objpoint[xx].DISPLAY.OTHOR != null)
+            htmx += Objpoint[xx].DISPLAY.OTHOR + "<br>";
         htmx +="</td>";
         
         if(media_width >= 600){
-            console.log("media width : " + media_width);
             // Colunm Input
             htmx +="<td id=\"b-input\" >";
-            if(Objpoint[x].INPUT.TYPE == "" || Objpoint[x].INPUT.TYPE == "-") {
+            if(Objpoint[xx].INPUT.TYPE == "" || Objpoint[xx].INPUT.TYPE == "-") {
                 htmx +="-";
             }
             else {
-                htmx += Objpoint[x].INPUT.TYPE + "<br>";
-                if(Objpoint[x].INPUT.OTHER != null || Objpoint[x].INPUT.OTHER != "")
-                    htmx += Objpoint[x].INPUT.OTHER + "<br>";
-                if(Objpoint[x].INPUT.CH != null)
-                    htmx += Objpoint[x].INPUT.CH +" ch";
+                htmx += Objpoint[xx].INPUT.TYPE + "<br>";
+                if(Objpoint[xx].INPUT.OTHER != null || Objpoint[xx].INPUT.OTHER != "")
+                    htmx += Objpoint[xx].INPUT.OTHER + "<br>";
+                if(Objpoint[xx].INPUT.CH != null)
+                    htmx += Objpoint[xx].INPUT.CH +" ch";
                 else
-                    htmx += Objpoint[x].INPUT.CHANNEL +" ch";
+                    htmx += Objpoint[xx].INPUT.CHANNEL +" ch";
             }
             htmx +="</td>";
             
             // Colunm Output
             htmx +="<td id=\"b-output\" >";
-            if(Objpoint[x].OUTPUT.TYPE == "" || Objpoint[x].OUTPUT.TYPE == "-") {
+            if(Objpoint[xx].OUTPUT.TYPE == "" || Objpoint[xx].OUTPUT.TYPE == "-") {
                 htmx +="-";
             }
             else {
-                htmx += Objpoint[x].OUTPUT.TYPE + "<br>";
-                if(Objpoint[x].OUTPUT.OTHER != null || Objpoint[x].OUTPUT.OTHER != "")
-                    htmx += Objpoint[x].OUTPUT.OTHER + "<br>";
-                if(Objpoint[x].OUTPUT.CH != null)
-                    htmx += Objpoint[x].OUTPUT.CH +" ch";
+                htmx += Objpoint[xx].OUTPUT.TYPE + "<br>";
+                if(Objpoint[xx].OUTPUT.OTHER != null || Objpoint[xx].OUTPUT.OTHER != "")
+                    htmx += Objpoint[xx].OUTPUT.OTHER + "<br>";
+                if(Objpoint[xx].OUTPUT.CH != null)
+                    htmx += Objpoint[xx].OUTPUT.CH +" ch";
                 else
-                    htmx += Objpoint[x].OUTPUT.CHANNEL +" ch";
+                    htmx += Objpoint[xx].OUTPUT.CHANNEL +" ch";
             }
             htmx +="</td>";
         
             // Colunm COMMUNICATION
             htmx +="<td id=\"b-comm\" >";
-            if(Objpoint[x].COMMUNICATION.TYPE == "" || Objpoint[x].COMMUNICATION.TYPE == "-") {
+            if(Objpoint[xx].COMMUNICATION.TYPE == "" || Objpoint[xx].COMMUNICATION.TYPE == "-") {
                 htmx +="-";
             }
             else {
-                htmx += Objpoint[x].COMMUNICATION.TYPE + "<br>";
-                if(Objpoint[x].COMMUNICATION.OTHER != null || Objpoint[x].COMMUNICATION.OTHER != "")
-                    htmx += Objpoint[x].COMMUNICATION.OTHER + "<br>";
-                if(Objpoint[x].COMMUNICATION.CH != null)
-                    htmx += Objpoint[x].COMMUNICATION.CH +" ch";
+                htmx += Objpoint[xx].COMMUNICATION.TYPE + "<br>";
+                if(Objpoint[xx].COMMUNICATION.OTHER != null || Objpoint[xx].COMMUNICATION.OTHER != "")
+                    htmx += Objpoint[xx].COMMUNICATION.OTHER + "<br>";
+                if(Objpoint[xx].COMMUNICATION.CH != null)
+                    htmx += Objpoint[xx].COMMUNICATION.CH +" ch";
                 else
-                    htmx += Objpoint[x].COMMUNICATION.CHANNEL +" ch";
+                    htmx += Objpoint[xx].COMMUNICATION.CHANNEL +" ch";
             }
             htmx +="</td>";
         }
         
         htmx +="     <td id=\"b-download\" ><a class=\"a-button\"";
-        htmx +="             href=\"" + headWeb + "/" + Years + "/file/" + Objpoint[x].ORDER + ".pdf\">Download</a>";
+        htmx +="             href=\"" + headWeb + "/" + Years + "/file/" + Objpoint[xx].ORDER + ".pdf\">Download</a>";
         htmx +="     </td>";
         
         var detial = "";
         detial +="     <td id=\"b-detail\" >";
-        for(y in Objpoint[x].FUNCTION){
+        for(y in Objpoint[xx].FUNCTION){
             if(y == 4){
                 // detial +="<div class=\"dot\" id=\"dots" + x + "\">...</div>";
-                detial +="<div class=\"more\" id=\"more"+ Years +""+ x + "\">";
+                detial +="<div class=\"more\" id=\"more"+ Years +""+ xx + "\">";
                 detial +="<div>";
-                detial += Objpoint[x].FUNCTION[y];
+                detial += Objpoint[xx].FUNCTION[y];
                 detial +="</div>";
             }
-            else if(y > 4 && y == Objpoint[x].FUNCTION.length - 1){
+            else if(y > 4 && y == Objpoint[xx].FUNCTION.length - 1){
                 detial +="<div>";
-                detial += Objpoint[x].FUNCTION[y];
+                detial += Objpoint[xx].FUNCTION[y];
                 detial +="</div>";
                 detial +="</div>";
-                detial +="<a href=\"#view\" onclick=\"readMore("+ Years + x + ",0);\" id=\"myBtn"+ Years + x + "\">read more...</a>";
+                detial +="<a href=\"#view\" onclick=\"readMore("+ Years + xx + ",0);\" id=\"myBtn"+ Years + xx + "\">read more...</a>";
             }
             else{
                 detial +="<div>";
-                detial += Objpoint[x].FUNCTION[y];
+                detial += Objpoint[xx].FUNCTION[y];
                 detial +="</div>";
             }
         }
@@ -181,38 +183,23 @@ function setTable(json){
             readMore(Years +""+ x, 1);
         }
     }
-    if(media_width < 900){
-        document.getElementById('selest-filter').style.display = "none";
-        document.getElementById('search-table').style.display = "none";
-    }else{
-        document.getElementById('selest-filter').style.display = "initial";
-        document.getElementById('search-table').style.display = "initial";
-    }
     set_sort(404, 1);
 }
 function loadtable(){
-    var htmx = '';
     var url;
-    var Obj, stObj;
-    var Objpoint;
     var Years = document.querySelector('#selest-year').value;
-    url = "/read?YEAR=" + Years;
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", url, false);
-    rawFile.onreadystatechange = function () {
-        if (rawFile.readyState === 4) {
-            if (rawFile.status === 200 || rawFile.status == 0) {
-                row_main = this.responseText;
-                Obj = JSON.parse(row_main);
-                stObj = JSON.stringify(Obj);
-                if (DebugLog)
-                    console.log(Obj);
-                IndexMain = Obj;
-                setTable(Obj);
-            }
-        }
+    console.log("public_ip : " + public_ip);
+    get_ip();
+    var log = {
+        Action:"View-"+Years,
+        IP:public_ip,
+        Time:NowTime,
+        Date:NowDate
     }
-    rawFile.send("x=" + stObj);
+    url = "/read?YEAR=" + Years;
+    url += "&Action=order";
+    url += "&log=" + JSON.stringify(log);
+    setTable(JSON.parse(dataServer('get', "", url)));
 }
 document.querySelector('#btn-apply').addEventListener('click', loadtable, false);
 
@@ -237,7 +224,7 @@ function readMore(order, sett) {
   const getjsonformhost = (method, URLLoad, status) => {
       let Obj, stObj;
       let rawFile = new XMLHttpRequest();
-      rawFile.open(method, URLLoad, false);
+      rawFile.open(method, host+URLLoad, false);
       rawFile.onreadystatechange = function () {
           status = rawFile.status;
           if (rawFile.readyState === 4) {
@@ -254,9 +241,22 @@ function readMore(order, sett) {
   };
   function addfile() {
     let status;
-    var data = getjsonformhost('get', '/read/login?user=Suphot&pass=00000000', status);
+    let user = document.getElementById('uname').value;
+    let pass = document.getElementById('psw').value;
+    var data = getjsonformhost('get', '/read/login?user=' + user + '&pass=' + pass, status);
+    user = "";
+    pass = "";
+    document.getElementById('uname').value = "";
+    document.getElementById('psw').value = "";
     console.log(data);
-    if(data.sData.status == "true"){
+    if(data.sData.status == "true")
+    {
+        document.getElementById('login').style.display='none';
         window.open(data.sData.path);
+    }
+    else
+    {
+        var htm ="<center>"+data.sData.status+"</center>"
+        document.getElementById('al_error').innerHTML = htm;
     }
   }
