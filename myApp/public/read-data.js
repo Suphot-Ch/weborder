@@ -28,9 +28,11 @@ const setpathjson = (years, files) => {
 function readOrder(req, res, next){
     var log = JSON.parse(req.query.log);
     console.log(log);
+    log.IP = req.connection.remoteAddress;
     var logger = appJson.fileRead('./public/json/history.json');
     logger.push(log);
     appJson.fileWrite('./public/json/history.json', logger);
+
     path = require('./json/path.json');
     counts = require('./json/counter.json');
     let index = 404;
@@ -73,6 +75,9 @@ function readHistory(req, res, next){
 }
 router.get('/', function (req, res, next) {  
     console.log(req.query);
+    console.log("remoteAddress : " + req.connection.remoteAddress);
+    // console.log("remoteAddress : " + req.socket.remoteAddress);
+    // appJson.fileWrite('./public/json/req.json', req);
     if(req.query.Action == 'order')
     {
         readOrder(req, res, next);
