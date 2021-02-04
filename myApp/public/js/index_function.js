@@ -16,6 +16,20 @@ function readTextFile() {
     }
     rawFile.send("x=" + stObj);
 }
+function dataServer(method, host, url){
+    var data;
+    var rawFile = new XMLHttpRequest();
+    rawFile.open(method, host + url, false);
+    rawFile.onreadystatechange = function () {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status == 0) {
+                data = this.responseText;
+            }
+        }
+    }
+    rawFile.send("x=" + data);
+    return data;
+}
 function setTable(json){
     var htmx = '';
     var Objpoint;
@@ -28,7 +42,7 @@ function setTable(json){
     htmx += "<tbody>";
     htmx += "<div>";
     var x_max = Objpoint.length;
-    console.log(x_max);
+    console.log("Order length : " + x_max);
     for (x in Objpoint) {
         var xx = (x_max - x)-1;
         htmx += "<tr>";
@@ -49,7 +63,6 @@ function setTable(json){
         htmx +="</td>";
         
         if(media_width >= 600){
-            console.log("media width : " + media_width);
             // Colunm Input
             htmx +="<td id=\"b-input\" >";
             if(Objpoint[xx].INPUT.TYPE == "" || Objpoint[xx].INPUT.TYPE == "-") {
@@ -170,38 +183,23 @@ function setTable(json){
             readMore(Years +""+ x, 1);
         }
     }
-    if(media_width < 600){
-        // document.getElementById('selest-filter').style.display = "none";
-        // document.getElementById('search-table').style.display = "none";
-    }else{
-        // document.getElementById('selest-filter').style.display = "initial";
-        // document.getElementById('search-table').style.display = "initial";
-    }
     set_sort(404, 1);
 }
 function loadtable(){
-    var htmx = '';
     var url;
-    var Obj, stObj;
-    var Objpoint;
     var Years = document.querySelector('#selest-year').value;
-    url = "/read?YEAR=" + Years;
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", host+url, false);
-    rawFile.onreadystatechange = function () {
-        if (rawFile.readyState === 4) {
-            if (rawFile.status === 200 || rawFile.status == 0) {
-                row_main = this.responseText;
-                Obj = JSON.parse(row_main);
-                stObj = JSON.stringify(Obj);
-                if (DebugLog)
-                    console.log(Obj);
-                IndexMain = Obj;
-                setTable(Obj);
-            }
-        }
+    console.log("public_ip : " + public_ip);
+    get_ip();
+    var log = {
+        Action:"View-"+Years,
+        IP:public_ip,
+        Time:NowTime,
+        Date:NowDate
     }
-    rawFile.send("x=" + stObj);
+    url = "/read?YEAR=" + Years;
+    url += "&Action=order";
+    url += "&log=" + JSON.stringify(log);
+    setTable(JSON.parse(dataServer('get', "", url)));
 }
 document.querySelector('#btn-apply').addEventListener('click', loadtable, false);
 

@@ -24,10 +24,13 @@ const setpathjson = (years, files) => {
 // appJson.fileWrite('./public/json/year2020.json', yearx);
 // yearx.month = "";
 // console.log(years);
-
 /* GET home page. */
-router.get('/', function (req, res, next) {  
-    console.log(req.query);
+function readOrder(req, res, next){
+    var log = JSON.parse(req.query.log);
+    console.log(log);
+    var logger = appJson.fileRead('./public/json/history.json');
+    logger.push(log);
+    appJson.fileWrite('./public/json/history.json', logger);
     path = require('./json/path.json');
     counts = require('./json/counter.json');
     let index = 404;
@@ -45,17 +48,50 @@ router.get('/', function (req, res, next) {
         var pth = appJson.fileRead(setpathjson(path[index].YEAR, path[index].PATH[x]));
         sJson.DATA.push(pth);
     }
-    console.log(sJson);
+    // console.log(sJson);
     counts.view += 1;
+    
     var alarm = {
         status: "true",
         counter: counts.view,
         html: fn.refresh(0.1, ""),
         sData: sJson
     };
-    console.log(alarm);
+    // console.log(alarm);
     res.send(JSON.stringify(alarm));
     appJson.fileWrite('./public/json/counter.json', counts);
+}
+function readHistory(req, res, next){
+    var history = appJson.fileRead('./public/json/history.json');
+    var alarm = {
+        status: "true",
+        html: fn.refresh(0.1, ""),
+        sData: history
+    };
+    // console.log(alarm);
+    res.send(JSON.stringify(alarm));
+}
+router.get('/', function (req, res, next) {  
+    console.log(req.query);
+    if(req.query.Action == 'order')
+    {
+        readOrder(req, res, next);
+    }
+    else if(req.query.Action == 'history')
+    {
+        readHistory(req, res, next);
+    }
+    else
+    {
+        var alarm = {
+            status: "false",
+            counter: "-",
+            html: fn.refresh(0.1, ""),
+            sData: "-"
+        };
+        // console.log(alarm);
+        res.send(JSON.stringify(alarm));
+    }
 });
 
 router.get('/login', function (req, res, next) {  

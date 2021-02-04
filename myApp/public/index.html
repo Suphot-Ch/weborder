@@ -21,25 +21,29 @@
     <link rel="icon"
         href="https://user-images.githubusercontent.com/11943860/42296280-559c07f0-7fca-11e8-9a50-4fccde0b86cb.png"
         type="image/x-icon">
+    <!-- <script src="./jquary/3.2.1/jquery.min.js"></script> -->
+    <script src="./Jquary/3.5.1/jquery.min.js"></script>
+    <script src="./js/get-function.js"></script>
     <script src="./js/var-data.js"></script>
     <script src="./typedef.js"></script>
-    <script src="./Jquary/jquery.min.js"></script>
 </head>
 <style>
 </style>
 
-<body onpageshow="loadtable()">
+<body onpageshow="setTimeout(loadtable, 2000);">
     <div class="centered w3-container" id="alarm"></div>
     <header class="w3-container" style="background-color:#228738;color:#fff">
         <a href="#add" onclick="document.getElementById('login').style.display='block'" style="width:auto;">
             <div style="margin: 5px 5px;">Add Order</div>
         </a>
-        <!-- <p id="s-screen"></p>
-        <script>
-          var x = "Total Width: " + media_width + "px";
-          document.getElementById("s-screen").innerHTML = x;
-        </script> -->
     </header>
+    <!-- <center><p id="s-screen"></p></center>
+    <script>
+        setInterval(function(){
+            var x = "Total Width: " + media_width + "px IP=" + public_ip;
+            document.getElementById("s-screen").innerHTML = x;
+        },100);
+    </script> -->
     <!-- <div class="w3-container" id="minimize">
     </div> -->
     <div class="w3-container">
