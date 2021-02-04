@@ -199,7 +199,8 @@ function loadtable(){
     url = "/read?YEAR=" + Years;
     url += "&Action=order";
     url += "&log=" + JSON.stringify(log);
-    setTable(JSON.parse(dataServer('get', "", url)));
+    IndexMain = JSON.parse(dataServer('get', "", url));
+    setTable(IndexMain);
 }
 document.querySelector('#btn-apply').addEventListener('click', loadtable, false);
 
