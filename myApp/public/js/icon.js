@@ -1,0 +1,2 @@
+var link = '<link rel="icon"href="https://user-images.githubusercontent.com/11943860/42296280-559c07f0-7fca-11e8-9a50-4fccde0b86cb.png"type="image/x-icon">';
+document.getElementById('icon').innerHTML = link;

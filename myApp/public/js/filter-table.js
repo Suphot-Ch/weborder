@@ -8,13 +8,13 @@ function filterTable(event) {
         var col3 = rows[i].cells[media_width < 600? 0 : 3].textContent.toUpperCase();
         var col4 = rows[i].cells[media_width < 600? 0 : 4].textContent.toUpperCase();
         var col5 = rows[i].cells[media_width < 600? 0 : 5].textContent.toUpperCase();
-        var col7 = rows[i].cells[media_width < 600? 0 : 7].textContent.toUpperCase();
+        // var col7 = rows[i].cells[media_width < 600? 0 : 7].textContent.toUpperCase();
         if ((col0.indexOf(filter) > -1)
          || (col2.indexOf(filter) > -1)
          || (col3.indexOf(filter) > -1)
          || (col4.indexOf(filter) > -1)
          || (col5.indexOf(filter) > -1)
-         || (col7.indexOf(filter) > -1)
+        //  || (col7.indexOf(filter) > -1)
          ) {
             rows[i].style.display = "";
         } else {
