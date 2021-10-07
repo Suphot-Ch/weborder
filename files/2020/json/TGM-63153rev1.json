@@ -1,0 +1,43 @@
+{
+    "ORDER": "TGM-63153rev1",
+    "KEYWORD": "TGM-63153rev1 8I4D1R 3IP_TIMER Count start stop reset",
+    "DISPLAY": "7 Segment",
+    "SIZE": "8 INC",
+    "INPUT": {
+        "TYPE": "Dry Contact",
+        "OTHER": "Start Stop Reset",
+        "CH": "3"
+    },
+    "OUTPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "COMMUNICATION": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "- สามารถตั้งค่าการนับขึ้น/ลงได้",
+        "- สามารถตั้งค่า Reset Value ได้",
+        "กรณี นับขึ้น",
+        "- เมื่อ Trig Start เวลาเริ่มนับ จากค่าเดิมบนหน้าจอจนถึง 99:59",
+        "หาก Trig Stop เวลาจะหยุดนับและค้างค่าเดิมไว้",
+        "และเมื่อ Trig Reset ค่าที่แสดงจะเท่ากัน Reset Value",
+        "กรณี นับลง",
+        "- เมื่อ Trig Start เวลาเริ่มนับ จากค่าเดิมบนหน้าจอจนถึง 00:00",
+        "หาก Trig Stop เวลาจะหยุดนับและค้างค่าเดิมไว้",
+        "และเมื่อ Trig Reset ค่าที่แสดงจะเท่ากัน Reset Value"
+    ],
+    "BODYSIZE": "750W x 300H x 100D mm.",
+    "DATE": "19/11/2020",
+    "PRICE": "20000",
+    "SALE": {
+        "NAME": "Panuphat",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

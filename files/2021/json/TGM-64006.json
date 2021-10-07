@@ -1,0 +1,55 @@
+{
+  "ORDER": "TGM-64006",
+  "KEYWORD": "TGM-64006",
+  "DISPLAY": {
+    "TYPE": "7 Segment",
+    "SIZE":"8\"",
+    "OTHER": ""
+  },
+  "INPUT": {
+    "TYPE": "Analog 0-10VDC",
+    "OTHER": "",
+    "CHANNEL": "1"
+  },
+  "OUTPUT": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CHANNEL": ""
+  },
+  "COMMUNICATION": {
+    "TYPE": "RS485 Modbus RTU slave",
+    "OTHER": "",
+    "CHANNEL": "1"
+  },
+  "SUPPLY": {
+    "TYPE": "110-240 VAC/ 50-60Hz",
+    "OTHER": ""
+  },
+  "SOURCES": {
+    "TYPE": "-",
+    "OTHER": ""
+  },
+  "FUNCTION": [
+    "FUNCTION",
+    "- แสดงผลตัวเลข 0 - 9999",
+    "- กำหนดค่า ทศนิยมได้",
+    "- ตั้งค่า SCALE ได้ 0 – 9999 ",
+    "- ตั้งค่า Slave Address ได้ 1 – 240",
+    "- ตั้งค่า Baudrate ได้ 4800, 9600, 19200, 38400 และ 57600 (bps.)",
+    "- ตั้งค่า Parity ได้ None Odd และ Even",
+    "- ตั้งค่า Stop bit ได้ 1 และ 2",
+    "- รองรับ Protocol  Modbus RTU เชื่อมต่อผ่านสาย RS485",
+    "FEATURE",
+    "- รับ Input Analog 0 – 10 VDC แสดงผลบนจอ 7 Segment 8\" 4 หลัก",
+    "- Modbus RTU : สามารถเชื่อมต่อเพื่ออ่านข้อมูล PV แล้วข้อมูลการตั้งค่าต่างๆได้ ผ่าน RS485"
+  ],
+  "BODYSIZE": "850W x 700H x 100D",
+  "DATE": "2021-01-18",
+  "SALE": {
+    "NAME": "วิรัช กิมิพันนธ์",
+    "BRANCH": "ปทุมธานี",
+    "CALL": "0901975992",
+    "EMAIL": "ไรพฟะ",
+    "CUSTOMER": ""
+  }
+}

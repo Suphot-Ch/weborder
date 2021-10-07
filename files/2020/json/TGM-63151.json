@@ -1,0 +1,38 @@
+{
+    "ORDER": "TGM-63151",
+    "KEYWORD": "TGM-63151 2I3D2R 2AP_420 2OP_AL",
+    "DISPLAY": "7 Segment",
+    "SIZE": "2.3 INC",
+    "INPUT": {
+        "TYPE": "Analog 4-20 mA",
+        "OTHER": "",
+        "CH": "2"
+    },
+    "OUTPUT": {
+        "TYPE": "Relay Alarm",
+        "OTHER": "Alarm 4 Function",
+        "CH": "2"
+    },
+    "COMMUNICATION": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "- ทศนิยม 1 ตำแหน่ง",
+        "- สามารถตั้งค่า ชดเชย ได้  -19.9 – 99.9",
+        "- Scale Temp. 0.0 – 99.9°C",
+        "- Scale Humidity 0.0 – 99.9%RH",
+        "- Output สามารถตั้งค่า Alarm ได้ 4 function"
+    ],
+    "BODYSIZE": "550W x 350H x 100D mm.",
+    "DATE": "18/11/2020",
+    "PRICE": "12500",
+    "SALE": {
+        "NAME": "Notto",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

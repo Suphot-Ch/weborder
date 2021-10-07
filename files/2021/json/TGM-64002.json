@@ -1,0 +1,44 @@
+{
+    "ORDER": "TGM-64002",
+    "KEYWORD": "TGM-64002 1I4D1R 1AP_420 1OP_AL",
+    "DISPLAY": "7 Segment",
+    "SIZE": "1.2 INC",
+    "INPUT": {
+        "TYPE": "Analog 4-20mA",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "OUTPUT": {
+        "TYPE": "Relay Alarm",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "COMMUNICATION": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "24VDC 130mA",
+    "FUNCTION": [
+        "FUNCTION",
+        "- ตั้งค่า Scale high low ได้ -1999 - 9999",
+        "- ตั้งค่า ทศนิยมได้",
+        "- ตั้งค่า Alarm limit  ได้ 4 Mode",
+        "FEATURE",
+        "- Alarm Mode 1 : High Low Limit",
+        "- Alarm Mode 2 : High Limit",
+        "- Alarm Mode 3 : Low Limit",
+        "- Alarm Mode 4 : High Low Limit Range"
+    ],
+    "BODYSIZE": "200W x 150H x 100D mm.",
+    "DATE": "05/01/2021",
+    "SALE": "9700",
+    "Sale": {
+        "NAME": "สุวพากษ์ พี่ไอซ์",
+        "BRANCH": "สาขาใหญ่",
+        "CALL": "0844968070",
+        "EMAIL": "suwaphak@primusthai.com",
+        "CUSTOMMER": ""
+    }
+}

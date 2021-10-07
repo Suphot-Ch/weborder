@@ -1,0 +1,42 @@
+{
+    "ORDER": "TGM-63161",
+    "KEYWORD": "TGM-63161 2I4D2R 1IP_CNT COUNTER STOPTIME RS485 slave",
+    "DISPLAY": "7 Segment",
+    "SIZE": "2.3/4 INC",
+    "INPUT": {
+        "TYPE": "Counter PNP NPN ,Contact 1 Channel",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "OUTPUT": {
+        "TYPE": "ALARM Relay",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "COMMUNICATION": {
+        "TYPE": "RS485 Modbus RTU slave",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "FUNCTION",
+        "- ตั้งค่า ตัวคูณตัวหารได้ 1 - 999",
+        "- ตั้งค่า ทศนิยมได้",
+        "- ตั้งค่า Setpoint Alarm ได้ 0 - 9999",
+        "- สามารถเชื่อมต่อ RS485 Modbus RTU ได้",
+        "FEATURE",
+        "- เมื่อเครื่องจักรหยุดทำงาน STOP TIME เริ่มนับจากค่าเดิมเพิ่มขึ่นทุก 1 นาที",
+        "- และเมื่อเครื่องจักรทำงาน COUNTER +1 และ STOP TIME หยุดนับและค้างค่าไว้",
+        "- Alarm Relay ทำงานเมื่อ COUNTER มากกว่า SETPOINT"
+    ],
+    "BODYSIZE": "450W x 250H x 100D mm.",
+    "DATE": "07/12/2020",
+    "PRICE": "15500",
+    "SALE": {
+        "NAME": "Wirat",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

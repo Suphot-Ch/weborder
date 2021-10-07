@@ -1,0 +1,39 @@
+{
+    "ORDER": "TGM-63147",
+    "KEYWORD": "TGM-63147 2I for date time 4I6D3R 1IP_CNT 3OP_AL_timer RS485 km-18",
+    "DISPLAY": "7 Segment",
+    "SIZE": "4 INC",
+    "INPUT": {
+        "TYPE": "Digital Counter",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "OUTPUT": {
+        "TYPE": "Relay Alarm",
+        "OTHER": "",
+        "CH": "3"
+    },
+    "COMMUNICATION": {
+        "TYPE": "Slave RS485 Modbus RTU",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "12VDC",
+    "FUNCTION": [
+        "- แสดงวันที่ และเวลาปัจจุบัน (ปี ค.ศ.)",
+        "- Target ตั้งค่า Cycle ได้ 0 – 999 Sec.",
+        "- Actual ตั้งค่าตัวคูณตัวหาร ได้ 1 – 999",
+        "- Diff. เป็นผลลัพธ์เมื่อ (Actual - Target)",
+        "- Timer Alarm ตั้งค่า ได้ 1 - 99 Sec/Ch.",
+        "- Alarm ทำงานเมื่อ Actual ค้าที่ค่าเดิมนานกว่า Timer Alarm ที่ตั้งค่าไว้"
+    ],
+    "BODYSIZE": "950W x 750H x 100D mm.",
+    "DATE": "06/11/2020",
+    "PRICE":"59100",
+    "SALE": {
+        "NAME": "Chalongbun",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

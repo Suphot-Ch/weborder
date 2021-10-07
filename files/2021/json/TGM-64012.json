@@ -1,0 +1,57 @@
+{
+  "ORDER": "TGM-64012",
+  "KEYWORD": "TGM-64012 2I5D5R RS485 1IP_ENC 2AP_AL RS485",
+  "DISPLAY": {
+    "TYPE": "7 Segment",
+    "SIZE": "2.3\"",
+    "OTHER": ""
+  },
+  "INPUT": {
+    "TYPE": "Sensor NPN PNP Contact Counter",
+    "OTHER": "Encoder",
+    "CHANNEL": "1"
+  },
+  "OUTPUT": {
+    "TYPE": "Relay Alarm",
+    "OTHER": "",
+    "CHANNEL": "2"
+  },
+  "COMMUNICATION": {
+    "TYPE": "RS485 MB RTU Slave",
+    "OTHER": "",
+    "CHANNEL": "1"
+  },
+  "SUPPLY": {
+    "TYPE": "110-240 VAC/ 50-60Hz",
+    "OTHER": ""
+  },
+  "SOURCES": {
+    "TYPE": "12VDC 4A / SP 240VAC",
+    "OTHER": ""
+  },
+  "FUNCTION": [
+    "FUNCTION",
+    "- แสดงผลตัวเลข -19999 – 99999",
+    "- ตั้งค่าตัวคูณตัวหารได้",
+    "- ตั้งค่า Type input ได้ 2 mode ENC และ CNT",
+    "- สามารถเลือก Source Alarm ได้จากค่าที่แสดงบนจอ",
+    "- ตั้งค่าตัวเลขได้ผ่าน Remote และ RS485 Modbus RTU",
+    "FEATURE",
+    "แถว 1 แสดงผลเลขที่ใบงาน ตั้งค่าผ่าน Remote",
+    "แถว 2 แสดงผล จำนวนม้วนที่นับได้",
+    "แถว 3 แสดงผล จำนวน Input ที่นับได้",
+    "- เมื่อ แถว 3 มีค่าเท่ากับแถว 4 กำหนดไว้ ให้ แถว 2 บวกเพิ่ม 1 ม้วน และรีเซ็ต แถว 3 เป็น 0",
+    "แถว 4 แสดงผล ค่าที่กำหนดไว้ผ่าน Remote",
+    "แถว 5 แสดงผล จำนวน Input ที่นับได้รวม",
+    "Relay Alarm ทำงานเมื่อ Source ที่เลือกมีค่ามากกว่าหรือเท่ากับ Setpoint ที่ตั้งค่าไว้"
+  ],
+  "BODYSIZE": "900W x 850H x 100D",
+  "DATE": "2021-02-03",
+  "SALE": {
+    "NAME": "คุณวิิรัช กิมิพันธ์",
+    "BRANCH": "ปทุุมธานี",
+    "CALL": "0901979592",
+    "EMAIL": "",
+    "CUSTOMER": ""
+  }
+}

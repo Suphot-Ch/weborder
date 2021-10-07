@@ -1,0 +1,36 @@
+{
+    "ORDER": "TGM-63150",
+    "KEYWORD": "TGM-63150 8I3D1R 1AP_420 PT100 0-200C 1OP_AL",
+    "DISPLAY": "7 Segment",
+    "SIZE": "8 INC",
+    "INPUT": {
+        "TYPE": "Analog 4-20 mA",
+        "OTHER": "Converter EM-07",
+        "CH": "1"
+    },
+    "OUTPUT": {
+        "TYPE": "Relay Alarm",
+        "OTHER": "Alarm 4 Function",
+        "CH": "1"
+    },
+    "COMMUNICATION": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "- สามารถตั้งค่า Scale high low ได้  -199 – 999",
+        "- สามารถตั้งค่า ทศนิยมได้ (0, 0.0)",
+        "- Output สามารถตั้งค่า Alarm ได้ 4 function"
+    ],
+    "BODYSIZE": "750W x 300H x 100D mm.",
+    "DATE": "17/11/2020",
+    "PRICE": "16700",
+    "SALE": {
+        "NAME": "bas",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

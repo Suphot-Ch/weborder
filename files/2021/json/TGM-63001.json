@@ -1,0 +1,43 @@
+{
+  "ORDER": "TGM-63001",
+  "KEYWORD": "",
+  "DISPLAY": {
+    "SIZE": "-",
+    "OTHER": ""
+  },
+  "INPUT": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CHANNEL": ""
+  },
+  "OUTPUT": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CHANNEL": ""
+  },
+  "COMMUNICATION": {
+    "TYPE": "-",
+    "OTHER": "",
+    "CHANNEL": ""
+  },
+  "SUPPLY": {
+    "TYPE": "110-240 VAC/ 50-60Hz",
+    "OTHER": ""
+  },
+  "SOURCES": {
+    "TYPE": "-",
+    "OTHER": ""
+  },
+  "FUNCTION": [
+    ""
+  ],
+  "BODYSIZE": "W x H x D",
+  "DATE": "2021-01-08",
+  "SALE": {
+    "NAME": "",
+    "BRANCH": "",
+    "CALL": "",
+    "EMAIL": "",
+    "CUSTOMER": ""
+  }
+}

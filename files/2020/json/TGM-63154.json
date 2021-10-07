@@ -1,0 +1,40 @@
+{
+    "ORDER": "TGM-63154",
+    "KEYWORD": "TGM-63154 2I5D2R RS485 master CM-013",
+    "DISPLAY": "7 Segment",
+    "SIZE": "2.3 INC",
+    "INPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "OUTPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "COMMUNICATION": {
+        "TYPE": "RS485 Modbus RTU",
+        "OTHER": "master",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "- ใช้อ่านขอ้ มูลจาก CM-013 ผ่าน RS485 Modbus RTU",
+        "- สามารถเลือกตาำ หนน่ Register ที่ต้อ การอ่านไดอ้ ่านได้",
+        "- สามารถจาำ ตำาหนน่ SV ได้ 3 ตาำ หนน่",
+        "PV หสด ผลข้อมลู PV ที่รับไดจ้ าก CM-013",
+        "SV หสด ผลข้อมลู ตำาหนน่ ที่เลือก ที่รับไดจ้ าก CM-013",
+        "เช่น ใน้อา่ น Alarm1, Alarm2 หละ Alarm3",
+        "- สารมารถเลือกใน้หสด ผลได ้1 ค่า"
+    ],
+    "BODYSIZE": "400W x 250H x 100D mm.",
+    "DATE": "25/11/2020",
+    "PRICE": "17100",
+    "SALE": {
+        "NAME": "Panuphat",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

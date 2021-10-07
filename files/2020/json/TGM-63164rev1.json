@@ -1,0 +1,46 @@
+{
+    "ORDER": "TGM-63164rev1",
+    "KEYWORD": "TGM-63164rev1 2I2D17R 2I4D1R 2I5D3R RS485 slave",
+    "DISPLAY": "7 Segment",
+    "SIZE": "2.3 INC",
+    "INPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "OUTPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "COMMUNICATION": {
+        "TYPE": "RS485 MODBUS RTU slave",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "FUNCTION",
+        "- ตั้งค่า Address slave ได้ 1 - 240",
+        "- ตั้งค่า TARGET / ACTUAL / DIFF สามามารถแก้ไขผ่าน Remote ได้",
+        "FEATURE",
+        "- Register S01 – S16, AVG/MIN ",
+        "-- กำหนดเป็นทศนิยม 1 ตำแหน่ง",
+        "-- อ่าน/เขียน ผ่าน Modbus RTU ได้",
+        "-- สามารถกระพริบได้ เมื่อ Register blink ของ ตำแหน่งนั้นถูกกำหนดค่า",
+        "-- Parameter เป็นแบบ 16bits",
+        "- Register TARGET / ACTUAL / DIFF",
+        "-- อ่าน/เขียน ผ่าน Modbus RTU ได้",
+        "-- Parameter เป็นแบบ 32bits",
+        "- รอบรับ RTU function 03H, 04H, 06h และ 10h"
+    ],
+    "BODYSIZE": "550W x 1350H x 100D mm.",
+    "DATE": "10/12/2020",
+    "PRICE": "536",
+    "SALE": {
+        "NAME": "ธีรยุทธ ไพรมัส",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

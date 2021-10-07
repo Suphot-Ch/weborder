@@ -1,0 +1,38 @@
+{
+    "ORDER": "TGM-63158",
+    "KEYWORD": "TGM-63158 2I6D1R RS485 master",
+    "DISPLAY": "7 Segment",
+    "SIZE": "2.3 INC",
+    "INPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "OUTPUT": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "COMMUNICATION": {
+        "TYPE": "RS485 Modbus RTU master",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "- สามารถตั้งค่า Slave address ได้ 1 - 240",
+        "- สามารถกำหนด Register Value ที่ต้องการอ่านจาก Slave ได้",
+        "- สามารถกำหนด Register DP จาก Slave ได้",
+        "- สามารถกำหนดความเร็วการอ่านข้อมูลได้ 200 - 1000 mS",
+        "- ตรวจสอบเมื่อไม่สามารถเชื่อมต่อได้"
+    ],
+    "BODYSIZE": "350W x 200H x 100D mm.",
+    "DATE": "01/12/2020",
+    "PRICE": "12200",
+    "SALE": {
+        "NAME": "Paimanee <paimanee@primusthai.com>",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

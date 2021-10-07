@@ -1,0 +1,37 @@
+{
+    "ORDER": "TGM-63149rev1",
+    "KEYWORD": "TGM-63149rev1 4I3D6R 6AP_420 7OP_AL",
+    "DISPLAY": "7 Segment",
+    "SIZE": "4 INC",
+    "INPUT": {
+        "TYPE": "Analog 4-20 mA",
+        "OTHER": "Contact for enable output ch 6",
+        "CH": "6"
+    },
+    "OUTPUT": {
+        "TYPE": "",
+        "OTHER": "Lamp + Buzzer",
+        "CH": "7"
+    },
+    "COMMUNICATION": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "- สามารถตั้งค่า Scale high low ได้  -199 – 999",
+        "- สามารถตั้งค่า ทศนิยมได้ (0, 0.0)",
+        "- Output Ch 1-6 สามารถตั้งค่า Alarm ได้ 4 function",
+        "- Output Ch 7 ทำงานเมื่อ Ch 1-6 ช่องใดช่องหนึ่งทำงาน"
+    ],
+    "BODYSIZE": "1000W x 1100H x 100D mm.",
+    "DATE": "17/11/2020",
+    "PRICE": "37800",
+    "SALE": {
+        "NAME": "game",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

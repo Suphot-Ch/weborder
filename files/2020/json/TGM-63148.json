@@ -1,0 +1,43 @@
+{
+    "ORDER": "TGM-63148",
+    "KEYWORD": "TGM-63148 4I3D5R 5AP_420 6OP_AL TL60&PM-024S",
+    "DISPLAY": "7 Segment",
+    "SIZE": "4 INC",
+    "INPUT": {
+        "TYPE": "Analog 4-20 mA",
+        "OTHER": "Contact for enable output ch 6",
+        "CH": "5"
+    },
+    "OUTPUT": {
+        "TYPE": "",
+        "OTHER": "Tower light",
+        "CH": "6"
+    },
+    "COMMUNICATION": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "PM-024S-1.2",
+    "FUNCTION": [
+        "- สามารถตั้งค่า Scale high low ได้  -199 – 999",
+        "- สามารถตั้งค่า ทศนิยมได้ (0, 0.0)",
+        "- Output Ch 1-5 สามารถตั้งค่า Alarm ได้ 4 function",
+        "- Output Ch 6 ทำงานเมื่อ Ch 1-5 ช่องใดช่องหนึ่งทำงาน",
+        "TL-Red = Output Ch 1  - STEAM 1",
+        "TL-Yellow = Output Ch 2  - STEAM 2",
+        "TL-Write = Output Ch 3  - STEAM 3",
+        "TL-Blue = Output Ch 4  - N2",
+        "TL-Green = Output Ch 5  - AIR",
+        "TL-Buzzer = Output Ch 6  - Ch 1 || 2 || 3 || 4 || 5  "
+    ],
+    "BODYSIZE": "950W x 850H x 100D mm.",
+    "DATE": "12/11/2020",
+    "PRICE": "33000",
+    "SALE": {
+        "NAME": "game",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "ORDER": "TGM-63165",
+    "KEYWORD": "TGM-63165 8I4D1R RS485 Master IM-A-O-M-220 TC PT100",
+    "DISPLAY": "7 Segment",
+    "SIZE": "12 INC",
+    "INPUT": {
+        "TYPE": "",
+        "OTHER": "TC/PT100 (IM-A)",
+        "CH": "1"
+    },
+    "OUTPUT": {
+        "TYPE": "Relay Alarm",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "COMMUNICATION": {
+        "TYPE": "RS485 MODBUS RTU master",
+        "OTHER": "IM-A-O-M-220",
+        "CH": "1"
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "FUNCTION",
+        "- ตั้งค่า เลือก Type input ได้ ทั้ง TC และ PT100",
+        "- ตั้งค่า ทศนิยมได้",
+        "- ตั้งค่า ชดเชยได้",
+        "- ตั้งค่า องศา C / F ได้",
+        "**อ้างอิงตามตารางตั้งค่า ของ IM-A",
+        "- ตั้งค่า Alarm ได้ 4 function",
+        "[ high low limit, high limit, low limit, high low limit range ]",
+        "FEATURE",
+        "- Modbus RTU อ่านข้อมูลจากอุปกรณ์ IM-A มาประมวณผลและแสดงบน Segment 12\" พร้อมสามารถตั้งค่า IM-A ที่ติดตั้งภายใน Display ผ่าน หน้าตั้งค่า 12\""
+    ],
+    "BODYSIZE": "1100W x 450H x 100D mm.",
+    "DATE": "21/12/2020",
+    "PRICE": "32400",
+    "SALE": {
+        "NAME": "อุดมพร อยู่เฬง",
+        "BRANCH": "ภาคใต้",
+        "Contact": "0866224819",
+        "CUSTOMER": ""
+    }
+}

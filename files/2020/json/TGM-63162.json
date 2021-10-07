@@ -1,0 +1,42 @@
+{
+    "ORDER": "TGM-63162",
+    "KEYWORD": "TGM-63162 8I3D1R 1IP_CNT 1OP_AL TIMECOUNTER",
+    "DISPLAY": "7 Segment",
+    "SIZE": "8 INC",
+    "INPUT": {
+        "TYPE": "TIME Counter PNP NPN ,Contact 1 Channel",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "OUTPUT": {
+        "TYPE": "ALARM Relay",
+        "OTHER": "",
+        "CH": "1"
+    },
+    "COMMUNICATION": {
+        "TYPE": "",
+        "OTHER": "",
+        "CH": ""
+    },
+    "SUPPLY": "110-240 VAC",
+    "SOURCE": "",
+    "FUNCTION": [
+        "FUNCTION",
+        "- ตั้งค่า การนับ Up/Down ได้",
+        "- ตั้งค่า Reset Point ได้ 0 -999",
+        "- ตั้งค่า Setpoint Alarm ได้ 0 999",
+        "FEATURE",
+        "- เมื่อแตะ INPUT ค้าง Counter เริ่มนับทุก 1 วินาที",
+        "- กรณีนับขึ้น เมื่อ Counter มากกว่าหรือเท่ากับ Alarm Output ทำงาน",
+        "- กรณีนับลง เมื่อ Counter น้อยกว่าหรือเท่ากับ Alarm Output ทำงาน",
+        "- เมื่อ RESET ค่า Counter จะเท่ากับ Reset Point ที่ตั้งค่าไว้"
+    ],
+    "BODYSIZE": "600W x 300H x 100D mm.",
+    "DATE": "07/12/2020",
+    "PRICE": "14000",
+    "SALE": {
+        "NAME": "Game",
+        "BRANCH": "",
+        "CUSTOMER": ""
+    }
+}

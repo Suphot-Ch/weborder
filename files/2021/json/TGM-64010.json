@@ -1,0 +1,55 @@
+{
+  "ORDER": "TGM-64010",
+  "KEYWORD": "TGM-64010 1I6D3R 1IP_CNT 1OP_AL RS485 slave",
+  "DISPLAY": {
+    "TYPE": "7 Segment",
+    "SIZE": "1.2\"",
+    "OTHER": ""
+  },
+  "INPUT": {
+    "TYPE": "Sensor NPN PNP Contact Counter",
+    "OTHER": "",
+    "CHANNEL": "1"
+  },
+  "OUTPUT": {
+    "TYPE": "Relay Alarm",
+    "OTHER": "",
+    "CHANNEL": "1"
+  },
+  "COMMUNICATION": {
+    "TYPE": "RS485 MB RTU Slave",
+    "OTHER": "",
+    "CHANNEL": "1"
+  },
+  "SUPPLY": {
+    "TYPE": "110-240 VAC/ 50-60Hz",
+    "OTHER": ""
+  },
+  "SOURCES": {
+    "TYPE": "12VDC 4A / SP 240VAC",
+    "OTHER": ""
+  },
+  "FUNCTION": [
+    "FUNCTION",
+    "- แสดงผลตัวเลข -199999 ถึง 999999",
+    "- ตั้งค่าตัวคูณตัวหาร Counter ได้",
+    "- ตั้งค่าการนับจำนวนขึ้นหรือลงได้",
+    "- ตั้งค่า Setpoint alarm ได้ -199999 ถึง 999999",
+    "- ตั้งค่า Baudrate ได้ 4800 9600 19200 38400 57600",
+    "- ตั้งค่า Parity ได้ None Odd Even",
+    "FEATURE",
+    "- COUNT แสดงค่าที่รับได้จาก Input Counter",
+    "- DATE แสดงผลวันที่ปัจจุบัน DD:MM:YY (ปี ค.ศ.)",
+    "- TIME แสดงผลเวลาปัจจุบัน HH:MM:SS  (Type 24)",
+    "- สามารถเลือก Type Input ได้ จากการจั้มบน Terminal"
+  ],
+  "BODYSIZE": "350W x 250H x 100D",
+  "DATE": "2021-01-26",
+  "SALE": {
+    "NAME": "วิรุณ ผ่านจัษหาร",
+    "BRANCH": "ปทุมธาณี",
+    "CALL": "092282550",
+    "EMAIL": "boat.tw61@gmail.com",
+    "CUSTOMER": ""
+  }
+}

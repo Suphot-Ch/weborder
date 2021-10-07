@@ -1,0 +1,53 @@
+{
+  "ORDER": "TGM-64008",
+  "KEYWORD": "TGM-64008 2M8D1R 4I4D2R 1IP_CNT 1OP_AL RS485 slave",
+  "DISPLAY": {
+    "TYPE": "7 Segment / Matrix",
+    "SIZE": "4\" / 2.3\" 5x7",
+    "OTHER": " / "
+  },
+  "INPUT": {
+    "TYPE": "Sensor NPN PNP Contact Counter",
+    "OTHER": "",
+    "CHANNEL": "1"
+  },
+  "OUTPUT": {
+    "TYPE": "Relay Alarm",
+    "OTHER": "",
+    "CHANNEL": "1"
+  },
+  "COMMUNICATION": {
+    "TYPE": "RS485 MB RTU Slave",
+    "OTHER": "",
+    "CHANNEL": "1"
+  },
+  "SUPPLY": {
+    "TYPE": "110-240 VAC/ 50-60Hz",
+    "OTHER": ""
+  },
+  "SOURCES": {
+    "TYPE": "-",
+    "OTHER": ""
+  },
+  "FUNCTION": [
+    "FUNCTION",
+    "- แสดงผลตัวเลข 0 - 9999",
+    "- กำหนดค่า ทศนิยมได้",
+    "- ตั้งค่า ตัวคูณ/ตัวหาร ได้ 1 – 999",
+    "- บันทึกข้อมูลตัวอักษรได้ 8 ตัวอักษร / 50 ชุด ",
+    "- ตั้งค่าตัวอักษรได้ผ่าน Remote และ RS485 Modbus RTU",
+    "FEATURE",
+    "- ACTUAL แสดงผลค่าที่รับได้จาก Input Counter",
+    "- TARGET แสดงค่าที่ตั้งจาก Remote และ RS485 Modbus RTU",
+    "- สูตร แสดงผลตัวอักษรที่ถูกบันทึกไว้ โดยสามารถเลือกมาแสดงผลได้ 1 ชุด จาก 50 ชุดตัวอักษรสูตร สามารถเลือกชุดตัวอักษรผ่าน Remote และ RS485 Modbus RTU"
+  ],
+  "BODYSIZE": "700W x 600H x 100D",
+  "DATE": "2021-01-25",
+  "SALE": {
+    "NAME": "วิรุณ ผ่านจังหาร",
+    "BRANCH": "ปทุมธานี",
+    "CALL": "0922825550",
+    "EMAIL": "wiroon@primusthai.com",
+    "CUSTOMER": ""
+  }
+}
